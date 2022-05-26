@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - 133T</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/external-styles/nice-select2.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper">
+        <svg height="42" viewBox="0 0 96 42" width="96" xmlns="http://www.w3.org/2000/svg" class="header__logo">
+            <g fill="none" fill-rule="evenodd">
+                <text fill="#4D57D0" font-family="ProximaNova" font-size="22" font-weight="600"
+                      transform="translate(1 1)">
+                    <tspan x="44" y="26">133T.</tspan>
+                </text>
+                <g stroke="#4D57D0" transform="translate(1 1)">
+                    <circle cx="20" cy="20" opacity=".1" r="20"/>
+                    <path d="M20 36c3.63 0 6.978-1.209 9.663-3.246A15.977 15.977 0 0 0 36 20c0-8.837-7.163-16-16-16S4 11.163 4 20s7.163 16 16 16z"
+                          opacity=".3"/>
+                    <circle cx="20" cy="20" opacity=".6" r="12"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+</header>
+<main class="main">
+    <section class="early-access">
+        <div class="early-access__wrapper">
+            <form class="form" id="form" novalidate>
+                <h2 class="form__title">Early Access</h2>
+                <p class="form__subtitle">Be first in line when we launch to the public.</p>
+                <div class="form__item  form-group">
+                    <input class="form__input" id="name" type="text" required
+                           data-pristine-pattern="/^[A-Za-z-_ ]{1,64}$/"
+                           data-pristine-required-message="Enter first name."
+                           data-pristine-pattern-message="Enter valid first name."
+                           placeholder="First Name">
+
+                </div>
+                <div class="form__item form-group">
+                    <input class="form__input " id="lastname" type="text" placeholder="Last Name" required
+                           data-pristine-pattern="/^[A-Za-z-_ ]{1,64}$/"
+                           data-pristine-required-message="Enter last name."
+                           data-pristine-pattern-message="Enter valid last name."
+                    >
+                </div>
+                <div class="form__item form-group">
+                    <input class="form__input" id="email" type="email" required
+                           data-pristine-required-message="Enter email address."
+                           data-pristine-email-message="Enter valid email address." placeholder="Email Address">
+                </div>
+                <div id="form-select" class="form__item form-group">
+                    <select id="a-select" class="form__input-select">
+                        <option value="COMPANY" class=" form__input-select-option">Employer</option>
+                        <option value="JS" class=" form__input-select-option">Job Seeker</option>
+                    </select>
+                    <small id="form-select-error" class="custom-error"></small>
+                </div>
+                <button type="submit" class="blue-button">Request Early Access</button>
+                <div class="form__socials">
+                    <a class="form__socials-item" href="https://www.facebook.com/133tjobs" target="_blank"
+                       referrerpolicy="no-referrer"><span class="icon-FB1"></span></a>
+                    <a class="form__socials-item" href="https://www.instagram.com/133tjobs/" target="_blank"
+                       referrerpolicy="no-referrer"><span class="icon-IG1"><span
+                            class="path1"></span><span class="path2"></span></span></a>
+                    <a class="form__socials-item" href="https://www.linkedin.com/company/11048055/admin/"
+                       target="_blank" referrerpolicy="no-referrer"><span class="icon-IN1"><span
+                            class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                    </a>
+                </div>
+            </form>
+            <p class="early-access__info">We're not into spam or selling your information. That's for the birds. So
+                don't worry,
+                things will be
+                quiet.</p>
+        </div>
+    </section>
+    <section class="applying">
+        <h1 class="applying__title">
+            Applying and hiring has
+            leveled up.
+        </h1>
+        <div class="applying__banner">
+            <svg class="applying__img" viewBox="0 0 855 691" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Group 20</title>
+                <defs>
+                    <rect id="path-1" x="0" y="0" width="442" height="460" rx="5"></rect>
+                    <filter x="-8.1%" y="-5.2%" width="116.3%" height="115.7%" filterUnits="objectBoundingBox"
+                            id="filter-2">
+                        <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1"
+                                        result="shadowBlurOuter1"></feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix"
+                                       in="shadowBlurOuter1"></feColorMatrix>
+                    </filter>
+                    <rect id="path-3" x="0.7" y="5" width="120.6" height="40" rx="5"></rect>
+                    <filter x="-29.0%" y="-62.5%" width="158.0%" height="275.0%" filterUnits="objectBoundingBox"
+                            id="filter-4">
+                        <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1"
+                                        result="shadowBlurOuter1"></feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0339816434 0" type="matrix"
+                                       in="shadowBlurOuter1"></feColorMatrix>
+                    </filter>
+                    <polygon id="path-5" points="61 0 65 5 57 5"></polygon>
+                    <filter x="-437.5%" y="-500.0%" width="975.0%" height="1500.0%" filterUnits="objectBoundingBox"
+                            id="filter-6">
+                        <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1"
+                                        result="shadowBlurOuter1"></feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.183184003 0" type="matrix"
+                                       in="shadowBlurOuter1"></feColorMatrix>
+                    </filter>
+                    <rect id="path-7" x="0" y="0" width="529" height="294" rx="5"></rect>
+                    <filter x="-6.8%" y="-8.2%" width="113.6%" height="124.5%" filterUnits="objectBoundingBox"
+                            id="filter-8">
+                        <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1"
+                                        result="shadowBlurOuter1"></feGaussianBlur>
+                        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix"
+                                       in="shadowBlurOuter1"></feColorMatrix>
+                    </filter>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Early-Access-Page-133T-3" transform="translate(-777.000000, -256.000000)">
+                        <g id="Group-20" transform="translate(777.931751, 256.000000)">
+                            <path d="M749.292754,3.17635574 C796.757013,-2.6902692 832.977907,0.50765973 846.790876,18.0668737 C852.918869,25.8568531 854.569102,36.4778391 850.848036,50.3520412 C847.309313,63.5463697 838.924775,79.6615135 824.889468,99.0797977 C777.561881,164.558988 742.232858,207.535026 716.213339,239.186604 C655.039043,313.602395 645.227921,325.55809 651.952164,419.697504 C653.153525,436.516553 643.668102,455.256799 626.260639,474.759974 C607.357371,495.939037 579.103113,518.002063 544.882812,539.459046 C472.18279,585.043777 372.565205,627.880704 278.378714,653.649476 C199.983557,675.097848 125.351686,684.729149 73.1602884,674.24183 C50.0867574,669.605443 31.4069988,661.03776 18.7650677,647.78982 C7.01782156,635.479454 0.5,619.128945 0.5,598.167926 C0.5,387.156939 154.693393,278.470382 265.851654,200.070482 C284.64286,186.817048 302.207515,174.428481 317.59619,162.558336 C382.034943,112.853125 612.526277,20.0808152 749.292754,3.17635574 Z"
+                                  id="Oval-Copy-6" stroke="#2CD090" opacity="0.296735491"></path>
+                            <path d="M620.568249,410 C612.09575,291.385007 633.362423,320.467147 773.556464,126.504326 C913.750504,-67.4584943 418.182567,109.363323 323.909984,182.081035 C229.637401,254.798747 43.0682491,349.498697 43.0682491,568 C43.0682491,755.501732 629.040749,528.614993 620.568249,410 Z"
+                                  id="Oval" fill="#F4F5F9"></path>
+                            <path d="M718.372465,28.9908385 C762.531743,23.5327122 796.237841,26.4993969 809.090374,42.8376932 C814.788555,50.0812896 816.32027,59.9576882 812.860474,72.8577356 C809.567496,85.1357893 801.764699,100.13156 788.704121,118.201275 C744.653098,179.147238 711.769954,219.147973 687.551808,248.608263 C630.603655,317.88314 621.471285,329.013163 627.730969,416.648744 C628.84866,432.296411 620.020886,449.730253 603.826498,467.874308 C586.233466,487.585394 559.937407,508.118945 528.089034,528.088671 C460.423796,570.516466 367.70512,610.38667 280.041452,634.370842 C207.078941,654.33288 137.618836,663.297848 89.044083,653.537256 C67.5757644,649.22342 50.1948686,641.252713 38.4322895,628.926278 C27.5038376,617.473956 21.4410906,602.262861 21.4410906,582.763077 C21.4410906,386.371524 164.954538,285.217531 268.410589,212.249998 C285.901514,199.913653 302.250753,188.382318 316.574589,177.333543 C376.550393,131.070853 591.078373,44.7245026 718.372465,28.9908385 Z"
+                                  id="Oval-Copy-5" stroke="#979797" opacity="0.1"></path>
+                            <g id="Group-15" transform="translate(130.568249, 51.047162)">
+                                <g id="Group">
+                                    <g id="Rectangle">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-2)"
+                                             xlink:href="#path-1"></use>
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                    </g>
+                                    <rect id="Rectangle" fill="#D8D8D8" opacity="0.113048735" x="0" y="49.5036941"
+                                          width="442" height="57.994217"></rect>
+                                    <rect id="Rectangle-Copy-10" fill="#D8D8D8" opacity="0.3" x="49.5" y="225.25"
+                                          width="99" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-19" fill="#D8D8D8" opacity="0.3" x="49.5" y="162.5"
+                                          width="128" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-36" fill="#D8D8D8" opacity="0.3" x="49.5" y="290"
+                                          width="77" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-37" fill="#D8D8D8" opacity="0.3" x="49.5" y="348.75"
+                                          width="51" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-38" fill="#D8D8D8" opacity="0.3" x="49.5" y="407.5"
+                                          width="28.5" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="60.9" y="56.5" width="110.7" height="44"
+                                          rx="5"></rect>
+                                    <text id="9K" font-family="Graphik" font-size="25" font-weight="500" fill="#525252">
+                                        <tspan x="66.4218756" y="87">9K</tspan>
+                                    </text>
+                                    <text id="40" font-family="Graphik" font-size="25" font-weight="500" fill="#525252">
+                                        <tspan x="195" y="87">40</tspan>
+                                    </text>
+                                    <text id="30" font-family="Graphik" font-size="25" font-weight="500" fill="#525252">
+                                        <tspan x="324.578124" y="87">30</tspan>
+                                    </text>
+                                    <rect id="Rectangle" fill="#D8D8D8" opacity="0.45" x="105" y="73.75" width="60"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-28" fill="#D8D8D8" opacity="0.45" x="234.578124" y="73.75"
+                                          width="60" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-29" fill="#D8D8D8" opacity="0.45" x="364.156249" y="73.75"
+                                          width="44" height="9.5" rx="4.75"></rect>
+                                    <g id="Graph/Point/Description-Copy-4" transform="translate(55.250000, 91.000000)">
+                                        <g id="Rectangle-Copy-18">
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-4)"
+                                                 xlink:href="#path-3"></use>
+                                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                        </g>
+                                        <g id="Triangle">
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-6)"
+                                                 xlink:href="#path-5"></use>
+                                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                        </g>
+                                    </g>
+                                    <text id="9000-copy" font-family="Graphik" font-size="16" font-weight="500"
+                                          fill="#525252">
+                                        <tspan x="94.25" y="121">9000</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#3CBE0C" cx="168.53" cy="104.03" r="3.53"></circle>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="49.5" y="208.5" width="236.5" height="9.5"
+                                          rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-30" fill="#F4F5F9" x="49.5" y="273.25" width="236.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-32" fill="#F4F5F9" x="49.5" y="332" width="236.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-34" fill="#F4F5F9" x="49.5" y="390.75" width="236.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-40" fill="#F0FFEA" x="307.2" y="201.25" width="81.9844884"
+                                          height="24" rx="5"></rect>
+                                    <rect id="Rectangle-Copy-42" fill="#FFF8E9" x="307.2" y="324.75" width="104.190469"
+                                          height="24" rx="5"></rect>
+                                    <rect id="Rectangle-Copy-43" fill="#FFF3F3" x="307.2" y="383.5" width="81.9844884"
+                                          height="24" rx="5"></rect>
+                                    <text id="Active-Copy" opacity="0.800000012" font-family="Graphik" font-size="12"
+                                          font-weight="500" fill="#2A2A2A">
+                                        <tspan x="338.204654" y="217.25">Active</tspan>
+                                    </text>
+                                    <text id="Scheduled" opacity="0.800000012" font-family="Graphik" font-size="12"
+                                          font-weight="500" fill="#2A2A2A">
+                                        <tspan x="338.204654" y="340.75">Scheduled</tspan>
+                                    </text>
+                                    <text id="Closed" opacity="0.800000012" font-family="Graphik" font-size="12"
+                                          font-weight="500" fill="#2A2A2A">
+                                        <tspan x="338.204654" y="399.5">Closed</tspan>
+                                    </text>
+                                    <rect id="Rectangle-Copy-171" fill="#3CBE0C" x="323.2" y="210.028494" width="6"
+                                          height="6" rx="3"></rect>
+                                    <rect id="Rectangle-Copy-173" fill="#FFB91D" x="323.2" y="333.528494" width="6"
+                                          height="6" rx="3"></rect>
+                                    <rect id="Rectangle-Copy-174" fill="#F18282" x="323.2" y="392.278494" width="6"
+                                          height="6" rx="3"></rect>
+                                    <rect id="Rectangle-Copy-31" stroke="#D8D8D8" stroke-width="2" opacity="0.45"
+                                          x="17.9834151" y="271.295678" width="13.4086434" height="13.4086434"
+                                          rx="3"></rect>
+                                    <rect id="Rectangle-Copy-33" stroke="#D8D8D8" stroke-width="2" opacity="0.45"
+                                          x="17.9834151" y="330.045678" width="13.4086434" height="13.4086434"
+                                          rx="3"></rect>
+                                    <rect id="Rectangle-Copy-35" stroke="#D8D8D8" stroke-width="2" opacity="0.45"
+                                          x="17.9834151" y="388.795678" width="13.4086434" height="13.4086434"
+                                          rx="3"></rect>
+                                    <rect id="Rectangle" fill="#D8D8D8" opacity="0.3" x="198.906129" y="147.25"
+                                          width="102.5" height="40" rx="5"></rect>
+                                    <path d="M336.5,187.25 C333.738576,187.25 331.5,185.011424 331.5,182.25 L331.5,152.25 C331.5,149.488576 333.738576,147.25 336.5,147.25 L442,147.25 L442,187.25 L336.5,187.25 Z"
+                                          id="Combined-Shape" fill="#D8D8D8" opacity="0.3"></path>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="16.9834151" y="205.545678" width="15.4086434"
+                                          height="15.4086434" rx="3"></rect>
+                                    <text id="Dashboard" font-family=" Graphik" font-size="14" font-weight="500"
+                                          fill="#272727">
+                                        <tspan x="91.25" y="28.7377152">Dashboard</tspan>
+                                    </text>
+                                    <circle id="Oval" fill="#F4F5F9" cx="66.25" cy="24.7377152" r="16.25"></circle>
+                                </g>
+                                <g id="Group-7" transform="translate(85.500000, 313.000000)">
+                                    <g id="Rectangle">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-8)"
+                                             xlink:href="#path-7"></use>
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                    </g>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="50" y="67" width="55" height="53"
+                                          rx="5"></rect>
+                                    <rect id="Rectangle-Copy-22" fill="#FFFFFF" x="56.4858491" y="73.25"
+                                          width="42.0283019" height="40.5" rx="5"></rect>
+                                    <rect id="Rectangle-Copy-4" fill="#F4F5F9" x="50" y="139" width="55" height="53"
+                                          rx="5"></rect>
+                                    <g id="Group-4" transform="translate(56.485849, 145.250000)" fill="#FFFFFF">
+                                        <rect id="Rectangle-Copy-23" x="-1.38555833e-13" y="0" width="42.0283019"
+                                              height="40.5" rx="5"></rect>
+                                    </g>
+                                    <rect id="Rectangle-Copy-5" fill="#F4F5F9" x="50" y="211" width="55" height="53"
+                                          rx="5"></rect>
+                                    <g id="Group-4-Copy" transform="translate(56.485849, 217.250000)" fill="#FFFFFF">
+                                        <rect id="Rectangle-Copy-23" x="-1.38555833e-13" y="0" width="42.0283019"
+                                              height="40.5" rx="5"></rect>
+                                    </g>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="120" y="67" width="201.5" height="9.5"
+                                          rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-7" fill="#F4F5F9" x="120" y="139" width="163.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-9" fill="#F4F5F9" x="120" y="211" width="108.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-6" fill="#D8D8D8" opacity="0.3" x="120" y="84" width="86.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-27" fill="#D8D8D8" opacity="0.45" x="174.25" y="20.0096135"
+                                          width="66.1" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-13" fill="#3CBE0C" x="391" y="88.75" width="102.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-14" fill="#D8D8D8" opacity="0.302083333" x="391" y="160.75"
+                                          width="102.5" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-20" fill="#3CBE0C" x="391" y="160.819991" width="67.5"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-15" fill="#D8D8D8" opacity="0.302083333" x="391" y="232.75"
+                                          width="102.5" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-21" fill="#F18282" x="391" y="232.889981" width="44"
+                                          height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-8" fill="#D8D8D8" opacity="0.3" x="120" y="156"
+                                          width="43.5" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-16" fill="#D8D8D8" opacity="0.3" x="213.5" y="84"
+                                          width="30" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-24" fill="#D8D8D8" opacity="0.3" x="250.5" y="84"
+                                          width="20.3825215" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-25" fill="#D8D8D8" opacity="0.3" x="226.5" y="156"
+                                          width="13.7786288" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-26" fill="#D8D8D8" opacity="0.3" x="204.5" y="228"
+                                          width="13.7786288" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-17" fill="#D8D8D8" opacity="0.3" x="170.5" y="156"
+                                          width="49" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-18" fill="#D8D8D8" opacity="0.3" x="170.5" y="228"
+                                          width="27" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle-Copy-10" fill="#D8D8D8" opacity="0.3" x="120" y="228"
+                                          width="43.5" height="9.5" rx="4.75"></rect>
+                                    <rect id="Rectangle" fill="#F4F5F9" x="19.5913566" y="85.7956783" width="15.4086434"
+                                          height="15.4086434" rx="3"></rect>
+                                    <rect id="Rectangle-Copy-11" stroke="#D8D8D8" stroke-width="2" opacity="0.45"
+                                          x="20.5913566" y="158.795678" width="13.4086434" height="13.4086434"
+                                          rx="3"></rect>
+                                    <rect id="Rectangle-Copy-12" stroke="#D8D8D8" stroke-width="2" opacity="0.45"
+                                          x="20.5913566" y="230.795678" width="13.4086434" height="13.4086434"
+                                          rx="3"></rect>
+                                    <text id="Auto-Apply" font-family=" Graphik" font-size="14" font-weight="500"
+                                          fill="#272727">
+                                        <tspan x="91.25" y="28.7596135">Auto Apply</tspan>
+                                    </text>
+                                    <text id="Complete" opacity="0.697079613" font-family=" Graphik" font-size="14"
+                                          font-weight="500" fill="#272727">
+                                        <tspan x="409.25" y="80.1903385">Complete</tspan>
+                                    </text>
+                                    <text id="In-Progress" opacity="0.697079613" font-family=" Graphik" font-size="14"
+                                          font-weight="500" fill="#272727">
+                                        <tspan x="404.25" y="152.242509">In Progress</tspan>
+                                    </text>
+                                    <text id="Paused" opacity="0.697079613" font-family=" Graphik" font-size="14"
+                                          font-weight="500" fill="#272727">
+                                        <tspan x="417.75" y="224.5">Paused</tspan>
+                                    </text>
+                                    <polyline id="Path-Copy-3" stroke="#3CBE0C" stroke-width="1.86666667"
+                                              stroke-linecap="round" stroke-linejoin="round"
+                                              points="84.625 88.75 74.828125 98.25 70.375 93.9318182"></polyline>
+                                    <polyline id="Path-Copy-4" stroke="#3CBE0C" stroke-width="1.86666667"
+                                              stroke-linecap="round" stroke-linejoin="round"
+                                              points="84.625 160.75 74.828125 170.25 70.375 165.931818"></polyline>
+                                    <path d="M82.7358491,233 L73.2358491,242.5 M73.2358491,233 L82.7358491,242.5"
+                                          id="Combined-Shape" stroke="#F18282" stroke-width="1.86666667"
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <circle id="Oval" fill="#F4F5F9" cx="66.25" cy="24.7596135" r="16.25"></circle>
+                                </g>
+                                <line x1="613.997462" y1="364.427574" x2="86.0006866" y2="364.427574" id="Line-2"
+                                      stroke="#979797" opacity="0.15" stroke-linecap="square"></line>
+                                <rect id="Rectangle-Copy-41" fill="#FFF8E9" x="307.2" y="266" width="103.799295"
+                                      height="24" rx="5"></rect>
+                                <text id="Scheduled" opacity="0.800000012" font-family="Graphik" font-size="12"
+                                      font-weight="500" fill="#2A2A2A">
+                                    <tspan x="338.204654" y="282">Scheduled</tspan>
+                                </text>
+                                <rect id="Rectangle-Copy-172" fill="#FFB91D" x="323.2" y="274.778494" width="6"
+                                      height="6" rx="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="swiper applying__slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <p class="swiper-slide applying__message">
+                    Auto Apply takes care of the heavy lifting while you spend less time searching for your next
+                    career.
+                </p>
+
+                <p class="swiper-slide applying__message">Hire blazingly fast, not slow. Auto Apply pre-vets candidates,
+                    so you
+                    don't have to.</p>
+                <p class="swiper-slide applying__message">
+                    Auto Apply takes care of the heavy lifting while you spend less time searching for your next
+                    career.
+                </p>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+</main>
+
+<section class="success-modal">
+    <div class="success-modal__content" onclick="event.stopPropagation();">
+        <img src="./assets/images/invite-img.svg" alt="image" class="success-modal__img">
+        <p class="success-modal__description">Awesome! Thanks for jumping on board the 133T train! We're
+            working on getting 133T ready and can't wait to hear your feedback!
+            <span class="success-modal__description--blue">Feel free to reach out to us on live chat or drop us an
+                email.</span>
+        </p>
+        <a class="success-modal__link" href="mailto:Hello@133tjobs.com">Hello@133tjobs.com</a>
+        <button type="button" class="blue-button success-modal__button" onclick="successModalAction(false)">Gotcha!</button>
+    </div>
+</section>
+
+<script src="./js/pristine.min.js"></script>
+<script src="./js/nice-select2.min.js"></script>
+<script src="./js/script.js"></script>
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    const swiper = new Swiper(".swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    })
+</script>
+</body>
+</html>

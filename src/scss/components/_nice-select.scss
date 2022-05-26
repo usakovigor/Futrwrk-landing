@@ -1,0 +1,28 @@
+.nice-select {
+  padding-left: 8px;
+
+  &::after {
+    border-bottom: 1.5px solid $color__violet;
+    border-right: 1.5px solid $color__violet;
+  }
+
+  &:focus {
+    border: 1px solid #999ee3;
+  }
+
+  .option {
+    color: $color__text-black;
+    font-weight: 700;
+    @include flex(center, flex-start);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #f4f5f9;
+    }
+  }
+}
+
+.nice-select-dropdown {
+  width: 100%;
+  transition: all .15s linear;
+}
