@@ -139,6 +139,8 @@
     font-family: $font__main;
 
     &::placeholder {
+      font-size: 13px;
+      font-family: $font__main;
       color: #c1c2c5;
     }
 
@@ -176,6 +178,11 @@
     &:focus-visible {
       color: $color__text-black;
       border: 1px solid #999ee3;
+    }
+
+    .current {
+      line-height: 1;
+      margin-top: 1px;
     }
   }
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Sign Up - 133T</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="133T is a next generation job board, focused on innovating the resume-sourcing space. Our brand-new automated match technology makes hiring and applying for jobs easier than ever.">
+    <meta name="keywords" content="133T,Job Board, resume-sourcing space, hiring, jobs, applying, automated job board, career, job seeker, employers, employment">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -65,12 +67,12 @@
                 </div>
                 <button type="submit" class="blue-button">Request Early Access</button>
                 <div class="form__socials">
-                    <a class="form__socials-item" href="https://www.facebook.com/133tjobs" target="_blank"
+                    <a class="form__socials-item" aria-label="Facebook" href="https://www.facebook.com/133tjobs" target="_blank"
                        referrerpolicy="no-referrer"><span class="icon-FB1"></span></a>
-                    <a class="form__socials-item" href="https://www.instagram.com/133tjobs/" target="_blank"
+                    <a class="form__socials-item" aria-label="Instagram" href="https://www.instagram.com/133tjobs/" target="_blank"
                        referrerpolicy="no-referrer"><span class="icon-IG1"><span
                             class="path1"></span><span class="path2"></span></span></a>
-                    <a class="form__socials-item" href="https://www.linkedin.com/company/11048055/admin/"
+                    <a class="form__socials-item" aria-label="Linkedin" href="https://www.linkedin.com/company/11048055/admin/"
                        target="_blank" referrerpolicy="no-referrer"><span class="icon-IN1"><span
                             class="path1"></span><span class="path2"></span><span class="path3"></span></span>
                     </a>
@@ -380,14 +382,33 @@
 
 <section class="success-modal">
     <div class="success-modal__content" onclick="event.stopPropagation();">
-        <img src="./assets/images/invite-img.svg" alt="image" class="success-modal__img">
+        <svg class="success-modal__img" width="342" height="94" viewBox="0 0 342 94" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+                <path d="m122.759 88.757-.26-.007L7.631 82.386a4.486 4.486 0 0 1-3.104-1.492 4.5 4.5 0 0 1-.79-4.757l15.535-36.646a4.497 4.497 0 0 1 3.802-2.731l108.968-8.276a4.486 4.486 0 0 1 3.273 1.073 4.486 4.486 0 0 1 1.49 4.245l-9.634 51.286a4.49 4.49 0 0 1-1.646 2.71 4.49 4.49 0 0 1-3.025.952Z"
+                      stroke="#4D57D0"/>
+                <path d="m136.11 31.638 156.112 5.56a5 5 0 0 1 4.16 7.482l-22.026 38.444a5 5 0 0 1-4.081 2.508L124.14 93.15a5 5 0 0 1-5.126-6.132l12.05-51.521a5 5 0 0 1 5.046-3.859Z"
+                      fill="#2CD090"/>
+                <text font-family="Graphik-Medium, Graphik" font-size="30" font-weight="400" letter-spacing="1"
+                      transform="translate(.5 .492)">
+                    <tspan x="35.5" y="71.754" fill="#3A3A3A">Invite</tspan>
+
+
+                    <tspan x="130.1" y="71.754" fill="#FFF">Secured.</tspan>
+                </text>
+                <g fill="#2CD090" fill-rule="nonzero">
+                    <path d="M289.234 26.612c0-14.2 11.552-25.752 25.752-25.752s25.752 11.552 25.752 25.752-11.552 25.752-25.752 25.752-25.752-11.552-25.752-25.752Zm25.752-22.218c-12.25 0-22.218 9.967-22.218 22.218s9.967 22.218 22.218 22.218 22.218-9.967 22.218-22.218c0-12.25-9.967-22.218-22.218-22.218Z"/>
+                    <path d="m310.242 34.617-6.521-6.522a1.767 1.767 0 1 1 2.499-2.498l5.272 5.271 12.26-12.26a1.767 1.767 0 1 1 2.499 2.498l-13.51 13.51a1.767 1.767 0 0 1-2.499 0Z"/>
+                </g>
+            </g>
+        </svg>
         <p class="success-modal__description">Awesome! Thanks for jumping on board the 133T train! We're
             working on getting 133T ready and can't wait to hear your feedback!
             <span class="success-modal__description--blue">Feel free to reach out to us on live chat or drop us an
                 email.</span>
         </p>
         <a class="success-modal__link" href="mailto:Hello@133tjobs.com">Hello@133tjobs.com</a>
-        <button type="button" class="blue-button success-modal__button" onclick="successModalAction(false)">Gotcha!</button>
+        <button type="button" class="blue-button success-modal__button" onclick="successModalAction(false)">Gotcha!
+        </button>
     </div>
 </section>
 

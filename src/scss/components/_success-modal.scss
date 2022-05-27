@@ -14,6 +14,10 @@
   display: none;
   font-family: $font__main;
 
+  @include sm {
+    align-items: center;
+  }
+
   &__content {
     margin-top: 252.2px;
     width: 90vw;
@@ -29,6 +33,17 @@
     background-repeat: no-repeat;
     background-position-y: -85px;
     background-position-x: -20px;
+
+    @include sm {
+      margin-top: 0;
+      background-position-y: 0;
+      background-position-x: 0;
+      background-size: cover;
+    }
+
+    @include xs {
+      padding: 21px 30px 17.2px;
+    }
   }
 
   &__img {
@@ -39,6 +54,10 @@
 
     position: relative;
     left: -35px;
+
+    @include xs {
+      left: 0;
+    }
   }
 
   &__description {
