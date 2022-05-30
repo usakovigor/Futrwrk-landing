@@ -16,6 +16,7 @@
   &__wrapper {
     width: 426px;
     margin: 15px auto 0;
+    height: 100%;
 
     @include sm {
       width: 100%;
@@ -39,6 +40,7 @@
   max-width: 44.5%;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   padding-bottom: 20px;
 
   @include sm {
@@ -55,6 +57,12 @@
   &__wrapper {
     width: 426px;
     margin: 0 auto;
+    height: 100%;
+
+    @include xl {
+      @include flex(unset, center);
+      flex-direction: column;
+    }
 
     @include lg {
       max-width: 486px;
@@ -90,6 +98,10 @@
   border-radius: 5px;
   box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.03);
   background-color: $color__white;
+
+  @include xl {
+    margin-top: 70px;
+  }
 
   @include xxs {
     margin: 70px auto 27.5px;
@@ -210,8 +222,10 @@
 .applying {
   width: 55.5%;
   min-height: 100vh;
-  padding: 160px 39.1px 20px 33.9px;
+  padding: 33.9px 39.1px 20px;
   background: #fafafc;
+  @include flex(unset, center);
+  flex-direction: column;
 
 
   @include sm {

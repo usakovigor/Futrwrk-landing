@@ -34,7 +34,7 @@ async function onFormSubmit(event) {
             return;
         }
 
-        const ENDPOINT_URL = 'http://earlysignup.us-east-1.elasticbeanstalk.com/api/early-adopter/';
+        const ENDPOINT_URL = ' https://landing.133t.com/';
         fetch(ENDPOINT_URL, {
             method: 'POST',
             headers: {
