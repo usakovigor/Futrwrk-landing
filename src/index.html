@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Sign Up - 133T</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="133T is a next generation job board, focused on innovating the resume-sourcing space. Our brand-new automated match technology makes hiring and applying for jobs easier than ever.">
-    <meta name="keywords" content="133T,Job Board, resume-sourcing space, hiring, jobs, applying, automated job board, career, job seeker, employers, employment">
+    <meta name="description"
+          content="133T is a next generation job board, focused on innovating the resume-sourcing space. Our brand-new automated match technology makes hiring and applying for jobs easier than ever.">
+    <meta name="keywords"
+          content="133T,Job Board, resume-sourcing space, hiring, jobs, applying, automated job board, career, job seeker, employers, employment">
     <link
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -67,12 +69,15 @@
                 </div>
                 <button type="submit" class="blue-button">Request Early Access</button>
                 <div class="form__socials">
-                    <a class="form__socials-item" aria-label="Facebook" href="https://www.facebook.com/133tjobs" target="_blank"
+                    <a class="form__socials-item" aria-label="Facebook" href="https://www.facebook.com/133tjobs"
+                       target="_blank"
                        referrerpolicy="no-referrer"><span class="icon-FB1"></span></a>
-                    <a class="form__socials-item" aria-label="Instagram" href="https://www.instagram.com/133tjobs/" target="_blank"
+                    <a class="form__socials-item" aria-label="Instagram" href="https://www.instagram.com/133tjobs/"
+                       target="_blank"
                        referrerpolicy="no-referrer"><span class="icon-IG1"><span
                             class="path1"></span><span class="path2"></span></span></a>
-                    <a class="form__socials-item" aria-label="Linkedin" href="https://www.linkedin.com/company/11048055/admin/"
+                    <a class="form__socials-item" aria-label="Linkedin"
+                       href="https://www.linkedin.com/company/11048055/admin/"
                        target="_blank" referrerpolicy="no-referrer"><span class="icon-IN1"><span
                             class="path1"></span><span class="path2"></span><span class="path3"></span></span>
                     </a>
@@ -368,10 +373,6 @@
                 <p class="swiper-slide applying__message">Hire blazingly fast, not slow. Auto Apply pre-vets candidates,
                     so you
                     don't have to.</p>
-                <p class="swiper-slide applying__message">
-                    Auto Apply takes care of the heavy lifting while you spend less time searching for your next
-                    career.
-                </p>
             </div>
 
             <div class="swiper-pagination"></div>
@@ -419,6 +420,12 @@
     import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
 
     const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
