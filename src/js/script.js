@@ -34,7 +34,7 @@ async function onFormSubmit(event) {
             return;
         }
 
-        const ENDPOINT_URL = ' https://landing.133t.com/';
+        const ENDPOINT_URL = ' https://landing.133t.com/api/early-adopter/';
         fetch(ENDPOINT_URL, {
             method: 'POST',
             headers: {
