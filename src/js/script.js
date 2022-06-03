@@ -56,6 +56,9 @@ async function onFormSubmit(event) {
 function clearForm() {
     form.reset();
     select.clear();
+    select.update();
+    const error = document.getElementById('form-select-error');
+    error.innerText = '';
 }
 
 function validateSelect() {
