@@ -34,14 +34,14 @@
   @include flex(stretch, space-between);
   font-family: $font__main;
   width: 100%;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .early-access {
   max-width: 44.5%;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 26.5px;
 
   @include sm {
     max-width: unset;
@@ -57,12 +57,9 @@
   &__wrapper {
     width: 426px;
     margin: 0 auto;
+    @include flex(unset, center);
+    flex-direction: column;
     height: 100%;
-
-    @include xl {
-      @include flex(unset, center);
-      flex-direction: column;
-    }
 
     @include lg {
       max-width: 486px;
@@ -74,7 +71,6 @@
       padding: 0 10px;
       width: 90vw;
     }
-
   }
 
   &__info {
@@ -84,13 +80,37 @@
     text-align: center;
     margin: 0 auto;
     color: $color__text-gray;
+
+    @include xxs {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__policy {
+    text-align: center;
+    display: flex;
+    gap: 15.5px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #7d7d7d;
+    justify-content: center;
+    margin-top: auto;
+
+    &--link {
+      font-size: 13px;
+      line-height: 1.54;
+      color: #7d7d7d;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   min-height: 564px;
   padding: 40.5px 36.5px 18.7px;
@@ -100,7 +120,7 @@
   background-color: $color__white;
 
   @include xl {
-    margin-top: 70px;
+    margin-top: 15vh;
   }
 
   @include xxs {
@@ -221,12 +241,10 @@
 
 .applying {
   width: 55.5%;
-  min-height: 100vh;
   padding: 33.9px 39.1px 20px;
   background: #fafafc;
   @include flex(unset, center);
   flex-direction: column;
-
 
   @include sm {
     display: none;

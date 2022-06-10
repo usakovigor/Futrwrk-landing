@@ -6,7 +6,7 @@ const PATHS = {
         assets: `dist/assets/`,
     },
     src: {
-        html: 'src/*.html',
+        html: 'src/**/*.html',
         css: 'src/scss/styles.scss',
         js: 'src/js/*.js',
         assets: `src/assets/**`
@@ -27,6 +27,7 @@ const csso = require('gulp-csso');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const jsMinify = require('gulp-minify');
+const rename = require('gulp-rename');
 
 
 let browsersync = require('browser-sync').create();
@@ -41,6 +42,7 @@ function browserSync() {
 
 function html() {
     return src(PATHS.src.html)
+        .pipe(rename({dirname: ''}))
         .pipe(dest(PATHS.build.html))
         .pipe(browsersync.stream())
 }
