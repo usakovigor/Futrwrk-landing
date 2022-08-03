@@ -1,0 +1,148 @@
+.footer {
+  min-height: 504px;
+  background-color: #3641ba;
+  padding-top: 33px;
+  margin-top: 137px;
+
+  &__wrapper {
+    @media (screen and min-width: 1200px) {
+      padding-left: 151.4px;
+      padding-right: 96.6px;
+    }
+  }
+
+  &__nav {
+    @include flex(center, space-between);
+
+    width: 100%;
+
+    @include xl {
+      gap: 70px;
+
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
+  }
+
+  &__nav-list {
+    @include flex(center, space-between);
+
+    max-width: 1138.4px;
+    width: 100%;
+
+    @include xl {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    @include xs {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    font-family: $font__main;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.11px;
+    color: $color__white;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__container {
+    @include flex(center, space-between);
+    gap: 50px;
+
+    min-height: 307.1px;
+    padding-top: 94px;
+    margin-bottom: 60px;
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 504px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 45px;
+    font-weight: 500;
+    padding-top: 39.1px;
+    position: relative;
+    line-height: normal;
+    line-height: 1;
+    letter-spacing: -.4px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      top: 0;
+      left: 0;
+
+      background-color: #2a2a2a;
+    }
+
+    @include xs {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    margin-top: 21px;
+    font-size: 18px;
+    color: #a5a5a5;
+  }
+
+  &__button {
+    border: 2px solid $color__white;
+    color: $color__white;
+    margin-right: 165px;
+
+    @include xl {
+      margin-right: 0;
+    }
+  }
+
+  &__socials {
+    min-height: 47px;
+    height: 100%;
+    background-color: #2a2a2a;
+    @include flex(center, space-between);
+  }
+
+  &__socials-list {
+    @include flex(center, space-between);
+
+    max-width: 389px;
+    width: 100%;
+    margin: 0 165.4px 0 auto;
+
+    @include xs {
+      margin: 0 auto;
+    }
+
+    @include xxs {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__socials-item > &__link {
+    font-weight: 500;
+
+    @include xxs {
+      font-size: 14px;
+    }
+  }
+}

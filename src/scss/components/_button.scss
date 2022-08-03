@@ -1,4 +1,3 @@
-@import "../variables";
 .blue-button {
   font-family: $font__main;
   width: 99%;
@@ -21,5 +20,104 @@
     background: #f6f6f6;
     color: #aeaeae;
     cursor: not-allowed;
+  }
+}
+
+.button-arrow {
+  height: 47px;
+  width: 225px;
+  margin: 0;
+  border-radius: 5px;
+  background: transparent;
+  border: solid 1.7px $color__neon;
+  line-height: 1;
+  font-family: $font__main;
+  padding: 0 15px;
+  color: $color__white;
+  position: relative;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &__icon {
+    color: $color__neon;
+    font-size: 9px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #3641BA;
+    color: $color__neon;
+  }
+}
+
+
+.main-btn {
+  width: 212px;
+  height: 56px;
+  font-family: $font__main;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 1;
+  position: relative;
+  border: 2px solid $color__violet;
+  color: $color__violet;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &__icon {
+    font-size: 13px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color__neon;
+  }
+
+  &:not(&--blue):hover {
+    background: $color__violet;
+    color: $color__neon;
+  }
+
+  &--blue {
+    background-color: $color__violet;
+    color: $color__white;
+    width: 256.5px;
+    border: 2px solid transparent;
+
+    &:hover {
+      background: #3641BA;
+    }
+  }
+}
+
+.play-btn {
+  @include flex(center, space-between);
+
+  color: $color__white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    color: rgba($color__neon, .8);
+  }
+
+  &--black {
+    color: #333333;
+  }
+
+
+  @include xxs {
+    padding: 0;
+    width: 100%;
+
+    justify-content: center;
+    gap: 15px;
   }
 }

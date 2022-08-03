@@ -1,0 +1,323 @@
+.header {
+  height: 679px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10.5px 51.1px 0 8px;
+  background: url('/assets/images/launch_website/for-js-bg.png'), linear-gradient(255deg, rgba(61, 78, 220, 1) 0%, rgba(67, 93, 217, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(105, 115, 238, 1) 70%, rgba(119, 236, 191, 1) 100%);
+
+  &--for-e {
+    background: url('/assets/images/launch_website/for-employers-bg.png'), linear-gradient(180deg, rgba(77, 87, 208, 1) -8%, rgba(77, 87, 208, 1) 21%, rgba(77, 87, 208, 1) 52%, rgba(119, 236, 191, 1) 101%, rgba(105, 115, 238, 1) 123%);
+  }
+
+  @include xxl {
+    padding: 10.5px 8px 0 8px;
+  }
+
+  @include lg {
+    min-height: 670px;
+    height: 100%;
+  }
+
+  @include xs {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    max-width: 1220.9px;
+    height: 100%;
+    position: relative;
+
+    @include xs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 3.3px;
+
+    &--beta {
+      font-family: $font__proxima;
+      color: $color__white;
+      padding-top: 2px;
+      font-size: 14px;
+
+    }
+  }
+
+  &__menu {
+    @include flex(center, space-between);
+    position: relative;
+    z-index: 2;
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    @include xs {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__nav {
+    margin: 0 29.2px 0 auto;
+
+    @include sm {
+      margin-right: 0;
+    }
+
+    @include xs {
+      margin: 0 auto;
+      min-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    @include flex(center, space-between);
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px 58px;
+
+    @include xxs {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+
+  &__item {
+    color: $color__white;
+    position: relative;
+
+    &:hover::after,
+    &--active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3.6px;
+      bottom: -8px;
+      left: 0;
+
+      background-color: #77ecbf;
+    }
+  }
+
+  &__link {
+    color: $color__white;
+    font-size: 16px;
+    font-family: $font__main;
+  }
+
+  &__button {
+    padding: 0 25px 0 5px;
+
+    @include sm {
+      display: none
+    }
+  }
+
+  &__buttons {
+    @include flex(center, space-between);
+
+    max-width: 380.8px;
+    margin-top: 33.3px;
+
+    @include xl {
+      margin: 33.3px auto 0;
+    }
+
+    @include xs {
+      flex-direction: column;
+      gap: 20px;
+
+      margin: 50px auto 0;
+    }
+  }
+
+  &__content-btn {
+    background-color: #4d57d0;
+    width: 212px;
+    height: 56px;
+  }
+
+  &__play-btn {
+    width: 136.3px;
+    height: 39px;
+  }
+
+  &__content {
+    @include flex(center, space-between);
+    padding: 11.5px 0 0 28px;
+
+    @include xxl {
+      padding: 11.5px 0 0 0;
+    }
+
+    @include xs {
+      margin: auto;
+    }
+  }
+
+  &__for-e-content {
+    @include flex(flex-start, flex-start);
+    gap: 7.7px;
+
+    @include xs {
+      margin: auto;
+    }
+  }
+
+  &__container {
+    padding-top: 35px;
+    max-width: 497px;
+
+    @include xl {
+      max-width: 700px;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    @include lg {
+      margin: 0 auto;
+    }
+
+    @include xs {
+      padding-top: 0;
+    }
+  }
+
+  &__for-e-container {
+    padding-top: 75.3px;
+
+    @include xs {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    max-width: 388px;
+    width: 100%;
+    line-height: 1.12;
+    letter-spacing: -2px;
+
+    @include xxl {
+      max-width: unset;
+      line-height: 1.4;
+    }
+  }
+
+  &__title--for-e {
+    max-width: 401px;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: 14px;
+    padding-top: 70px;
+  }
+
+  &__for-e-description {
+    font-size: 21px;
+    padding-top: 22.7px;
+    line-height: 1.71;
+    font-weight: normal;
+    letter-spacing: -0.4px;
+  }
+
+  &__profession-list {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    margin-top: 24px;
+    gap: 7px;
+
+    @include xl {
+      @include flex(center, center);
+      max-width: 600px;
+      margin: 24px auto 0;
+    }
+  }
+
+  &__profession {
+    font-size: 14px;
+    padding: 13px 17px;
+    height: 41px;
+    border: solid 1.3px $color__white;
+    border-radius: 5px;
+    line-height: normal;
+
+    &:first-child {
+      padding: 13px 10px;
+    }
+
+    &:nth-child(2) {
+      padding: 13px 8px;
+    }
+
+
+    &:last-child {
+      @include flex(center, center);
+      padding: 16px 17px 11px;
+      gap: 10px;
+    }
+
+    .icon-arrow {
+      font-size: 10px;
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__hiring-info {
+    margin: 48px 0 48px;
+    font-size: 18px;
+    letter-spacing: -0.6px;
+  }
+
+  &__hiring-link {
+    padding-left: 15px;
+    color: $color__neon;
+    text-decoration: underline;
+    position: relative;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__banner-img {
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+    right: -271px;
+
+    @include xxl {
+      width: 900px;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__for-e-img {
+    max-width: 708px;
+    width: 100%;
+    max-height: 598px;
+    height: 100%;
+    position: relative;
+    left: -13px;
+    bottom: 16px;
+
+    @include xl {
+      width: 600px;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+}

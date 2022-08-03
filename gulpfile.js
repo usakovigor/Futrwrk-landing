@@ -1,13 +1,14 @@
 const PATHS = {
     build: {
         html: `dist/`,
-        css: `dist/`,
+        css: `dist/css`,
         js: `dist/js/`,
         assets: `dist/assets/`,
     },
     src: {
         html: 'src/**/*.html',
         css: 'src/scss/styles.scss',
+        cssLayout: 'src/scss/layouts/*.scss',
         js: 'src/js/*.js',
         assets: `src/assets/**`
     },
@@ -66,6 +67,19 @@ function css() {
         .pipe(browsersync.stream())
 }
 
+function cssLayouts() {
+    return src(PATHS.src.cssLayout)
+        .pipe(sass())
+        .pipe(autoprefixer(['last 15 versions', '> 1%'], {cascade: false}))
+        .pipe(csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))
+        .pipe(dest(PATHS.build.css))
+        .pipe(browsersync.stream())
+}
+
 function js() {
     return src(PATHS.src.js, {allowEmpty: true})
         .pipe(jsMinify({
@@ -80,6 +94,7 @@ function js() {
 function watchFiles() {
     gulp.watch([PATHS.watch.html], html)
     gulp.watch([PATHS.watch.css], css)
+    gulp.watch([PATHS.watch.css], cssLayouts)
     gulp.watch([PATHS.watch.js], js)
     gulp.watch([PATHS.watch.assets], assets)
 }
@@ -88,7 +103,7 @@ function clean() {
     return del(PATHS.clean)
 }
 
-const build = gulp.series(clean, gulp.parallel(css, html, js, assets))
+const build = gulp.series(clean, gulp.parallel(css, cssLayouts, html, js, assets))
 const watch = gulp.parallel(watchFiles, build, browserSync);
 
 exports.css = css;

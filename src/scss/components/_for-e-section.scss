@@ -1,0 +1,33 @@
+.for-employers {
+  margin: 177px 0 0;
+  // min-height: 387.7px;
+
+  &__container {
+    max-width: 983px;
+  }
+
+  &__description {
+    margin: 16.6px auto 50.4px;
+    line-height: 1.75;
+    color: #767676;
+    font-weight: 500;
+    max-width: 766px;
+    letter-spacing: -0.3px;
+  }
+
+  &__btn-play {
+    width: 258px;
+    margin: 61px auto 0;
+  }
+
+  &__dashboard {
+    display: block;
+
+    max-width: 959px;
+    width: 100%;
+    max-height: 572px;
+    height: 100%;
+    margin: 61.5px auto 0;
+  }
+
+}
