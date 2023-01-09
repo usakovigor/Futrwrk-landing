@@ -1,5 +1,11 @@
 .early-access {
-  margin-top: 171.1px;
+  margin-top: 181.1px;
+  background: #f5f7fa;
+  padding: 81.1px 0;
+
+  @include sm {
+    margin-top: 107px;
+  }
 
   &__container {
     max-width: 983px;

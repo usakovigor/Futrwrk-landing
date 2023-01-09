@@ -1,0 +1,284 @@
+@import "../helpers/helpers";
+
+.contact-us {
+  &__header {
+    min-height: unset !important;
+    background: linear-gradient(90deg, rgba(119, 236, 191, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(67, 93, 217, 1) 70%, rgba(61, 78, 220, 1) 100%);
+    height: auto;
+    @include flex(flex-start, center);
+    padding-bottom: 25px;
+
+    @include xxl {
+      padding-bottom: 20px;
+    }
+
+    @include xs {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__header-wrapper {
+    @include flex(center, center);
+
+    .header__menu {
+      width: 100%;
+    }
+
+    .header__nav {
+      width: auto;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1232px;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 270px;
+  background: #f5f7fa;
+  border-bottom: 8px solid #f5f7fa;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(-90deg, rgba(119, 236, 191, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(67, 93, 217, 1) 70%, rgba(61, 78, 220, 1) 100%);
+
+  &__content {
+    height: 100%;
+    @include flex(center, space-between);
+    gap: 30px;
+
+    @include xs {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--left {
+      gap: 13px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    text-align: left;
+
+    @include xs {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-family: $font__main;
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    position: relative;
+
+    @include sm {
+      font-size: 18px;
+    }
+
+    &--gray {
+      color: #b5b5b5;
+    }
+
+    &--dot::before {
+      content: '';
+      background: $color__violet;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -21px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.message {
+  width: 100%;
+
+  &__content {
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 34px 91px;
+    @include flex(flex-start, flex-start);
+    gap: 22px;
+    margin: 87px 0 128px;
+
+    @include lg {
+      margin: 87px 0;
+    }
+
+    @include sm {
+      padding: 24px 41px;
+    }
+
+    @include xs {
+      padding: 15px 20px;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 48px;
+    aspect-ratio: 1/1;
+
+    @include xs {
+      width: 30px;
+    }
+  }
+
+  .description--main {
+    font-weight: 500;
+    text-align: left;
+
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}
+
+.form-sec {
+  width: 100%;
+  display: flex;
+  gap: 124px;
+  font-family: $font__main;
+
+  @include xl {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include sm {
+    gap: 50px;
+  }
+
+  @include xs {
+    gap: 30px;
+  }
+
+  &__desc {
+    font-size: 25px;
+    color: $color__text-gray;
+    margin-top: 53px;
+
+    @include sm {
+      margin-top: 30px;
+    }
+  }
+
+  &__form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.04);
+    max-width: 641px;
+    width: 100%;
+    height: fit-content;
+    padding: 64.5px 70.5px 63px 69.5px;
+
+    @include sm {
+      padding: 44.5px 50.5px 43px 59.5px;
+    }
+
+    @include xs {
+      padding: 24.5px 30.5px;
+    }
+
+    @include xxs {
+      padding: 24.5px 15px;
+    }
+  }
+
+  &__item {
+    padding-left: 78px;
+    position: relative;
+    margin-top: 53px;
+    position: relative;
+    letter-spacing: -0.14px;
+    text-align: left;
+
+    @include sm {
+      margin-top: 33px;
+      padding-left: 48px;
+    }
+
+    @include xs {
+      padding-left: 40px;
+    }
+
+    &:first-of-type {
+      margin-top: 93px;
+
+      @include sm {
+        margin-top: 53px;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 43px;
+      height: 43px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 4px solid #6973ee;
+      border-radius: 50%;
+
+      @include sm {
+        width: 33px;
+        height: 33px;
+      }
+
+      @include xs {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 64px;
+
+    svg {
+      display: none;
+    }
+
+    &--loading {
+      cursor: not-allowed;
+      pointer-events: none;
+
+      &:hover {
+        background: unset;
+      }
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 697px;
+
+    @include lg {
+      max-width: 80vw;
+    }
+
+    @include sm {
+      max-width: unset;
+    }
+  }
+}
+
+

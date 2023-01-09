@@ -1,0 +1,87 @@
+.accordion {
+  margin-top: 174px;
+  padding-bottom: 30.1px;
+  font-family: $font__main;
+
+  @include sm {
+    margin-top: 107px;
+  }
+
+  &__container {
+    margin: 51.9px auto 0;
+    max-width: 1153px;
+    width: 100%;
+    padding: 120.9px 51.1px 120.9px 51.1px;
+    border-radius: 10px;
+    background-color: #f5f7fa;
+
+    @include xs {
+      padding: 10px;
+      min-height: 600px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid #e1e2e3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    transform: translateY(-50%);
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__item--active > &__desc {
+    height: auto;
+    padding: 5px 0 8px;
+    min-height: 104.5px;
+  }
+
+  &__item--active &__icon {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &__head {
+    color: #333333;
+    cursor: pointer;
+    padding: 22.6px 80px 22.6px 10px;
+    width: 100%;
+    min-height: 80.1px;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.1px;
+    position: relative;
+
+    @include xxs {
+      font-size: 20px;
+    }
+  }
+
+  &__desc {
+    color: $color__text-gray-light;
+    width: fit-content;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 10px;
+
+    &.description {
+      text-align: start;
+    }
+  }
+}

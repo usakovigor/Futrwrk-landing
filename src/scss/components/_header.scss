@@ -2,7 +2,7 @@
   height: 679px;
   width: 100%;
   overflow: hidden;
-  padding: 10.5px 51.1px 0 8px;
+  padding: 25px 51.1px 0 8px;
   background: url('/assets/images/launch_website/for-js-bg.png'), linear-gradient(255deg, rgba(61, 78, 220, 1) 0%, rgba(67, 93, 217, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(105, 115, 238, 1) 70%, rgba(119, 236, 191, 1) 100%);
 
   &--for-e {
@@ -10,7 +10,7 @@
   }
 
   @include xxl {
-    padding: 10.5px 8px 0 8px;
+    padding: 20px 8px 0 8px;
   }
 
   @include lg {
@@ -20,10 +20,11 @@
 
   @include xs {
     height: 100vh;
+    padding: 10px 8px 0 8px;
   }
 
   &__wrapper {
-    max-width: 1220.9px;
+    max-width: 1232px;
     height: 100%;
     position: relative;
 
@@ -37,14 +38,6 @@
     display: flex;
     align-items: center;
     gap: 3.3px;
-
-    &--beta {
-      font-family: $font__proxima;
-      color: $color__white;
-      padding-top: 2px;
-      font-size: 14px;
-
-    }
   }
 
   &__menu {
@@ -85,7 +78,6 @@
 
     @include xxs {
       justify-content: center;
-      margin-top: 15px;
     }
   }
 
@@ -114,6 +106,7 @@
 
   &__button {
     padding: 0 25px 0 5px;
+    background: $color__violet;
 
     @include sm {
       display: none
@@ -174,6 +167,7 @@
   &__container {
     padding-top: 35px;
     max-width: 497px;
+    z-index: 1;
 
     @include xl {
       max-width: 700px;
@@ -288,21 +282,6 @@
     }
   }
 
-  &__banner-img {
-    bottom: 0;
-    position: absolute;
-    z-index: 0;
-    right: -271px;
-
-    @include xxl {
-      width: 900px;
-    }
-
-    @include lg {
-      display: none;
-    }
-  }
-
   &__for-e-img {
     max-width: 708px;
     width: 100%;
@@ -314,6 +293,62 @@
 
     @include xl {
       width: 600px;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__banner-img {
+    width: 741px;
+    aspect-ratio: 1/1;
+    bottom: -125px;
+    position: absolute;
+    z-index: 0;
+    right: -271px;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      opacity: 0.3;
+      background-image: linear-gradient(106deg, #00ffca 12%, #4d57d0 28%, #4c59d0 42%, #e700ff 61%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 95%;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: inherit;
+      border: 1px solid $color__neon;
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    img {
+      width: auto;
+      height: 608px;
+      position: absolute;
+      bottom: 121px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include xxl {
+      right: -75px;
     }
 
     @include lg {

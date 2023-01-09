@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up - 133T.</title>
+    <title>Futrwrk. | Sign Up</title>
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
@@ -21,20 +21,7 @@
 <header class="header">
     <div class="header__wrapper">
         <a href="/">
-            <svg height="42" viewBox="0 0 96 42" width="96" xmlns="http://www.w3.org/2000/svg" class="header__logo">
-                <g fill="none" fill-rule="evenodd">
-                    <text fill="#4D57D0" font-family="ProximaNova" font-size="22" font-weight="600"
-                          transform="translate(1 1)">
-                        <tspan x="44" y="26">133T.</tspan>
-                    </text>
-                    <g stroke="#4D57D0" transform="translate(1 1)">
-                        <circle cx="20" cy="20" opacity=".1" r="20"/>
-                        <path d="M20 36c3.63 0 6.978-1.209 9.663-3.246A15.977 15.977 0 0 0 36 20c0-8.837-7.163-16-16-16S4 11.163 4 20s7.163 16 16 16z"
-                              opacity=".3"/>
-                        <circle cx="20" cy="20" opacity=".6" r="12"/>
-                    </g>
-                </g>
-            </svg>
+            <img class="header__logo" src="/assets/images/futrwrk-logo-original.svg" alt="Futrwrk logo">
         </a>
     </div>
 </header>
@@ -44,42 +31,41 @@
             <form class="form" id="form" novalidate>
                 <h2 class="form__title">Early Access</h2>
                 <p class="form__subtitle">Be first in line when we launch to the public.</p>
-                <div class="form__item  form-group">
-                    <input class="form__input" id="name" type="text" required
+                <div class="form-group">
+                    <input class="input" id="name" type="text" required
                            data-pristine-pattern="/^[A-Za-z-_ ]{1,64}$/"
                            data-pristine-required-message="Enter first name."
                            data-pristine-pattern-message="Enter valid first name."
                            placeholder="First Name">
 
                 </div>
-                <div class="form__item form-group">
-                    <input class="form__input " id="lastname" type="text" placeholder="Last Name" required
+                <div class="form-group">
+                    <input class="input" id="lastname" type="text" placeholder="Last Name" required
                            data-pristine-pattern="/^[A-Za-z-_ ]{1,64}$/"
                            data-pristine-required-message="Enter last name."
                            data-pristine-pattern-message="Enter valid last name."
                     >
                 </div>
-                <div class="form__item form-group">
-                    <input class="form__input" id="email" type="email" required
+                <div class="form-group">
+                    <input class="input" id="email" type="email" required
                            data-pristine-required-message="Enter email address."
                            data-pristine-email-message="Enter valid email address." placeholder="Email Address">
                 </div>
-                <div id="form-select" class="form__item form-group">
-                    <select id="a-select" class="form__input-select">
-                        <option value="COMPANY" class=" form__input-select-option">Employer</option>
-                        <option value="JS" class=" form__input-select-option">Job Seeker</option>
+                <div id="a-select-group" class="form-group">
+                    <select id="a-select" class="input-select" placeholder="Who are you">
+                        <option value="COMPANY">Employer</option>
+                        <option value="JS">Job Seeker</option>
                     </select>
-                    <small id="form-select-error" class="custom-error"></small>
+                    <small id="a-select-error" class="custom-error"></small>
                 </div>
                 <button type="submit" class="blue-button">Request Early Access</button>
                 <div class="form__socials">
                     <a class="form__socials-item" aria-label="Facebook" href="https://www.facebook.com/133tjobs"
                        target="_blank"
                        referrerpolicy="no-referrer"><span class="icon-FB1"></span></a>
-                    <a class="form__socials-item" aria-label="Instagram" href="https://www.instagram.com/133tjobs/"
+                    <a class="form__socials-item" aria-label="Telegram" href="https://www.instagram.com/133tjobs/"
                        target="_blank"
-                       referrerpolicy="no-referrer"><span class="icon-IG1"><span
-                            class="path1"></span><span class="path2"></span></span></a>
+                       referrerpolicy="no-referrer"><span class="icon-telegram"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a>
                     <a class="form__socials-item" aria-label="Linkedin"
                        href="https://www.linkedin.com/company/11048055/admin/"
                        target="_blank" referrerpolicy="no-referrer"><span class="icon-IN1"><span
@@ -92,8 +78,8 @@
                 things will be
                 quiet.</p>
 
-            <p class="early-acc__policy"><span>© 2022 133T. Inc</span> <a href="/privacy-policy.html"
-                                                                             class="early-acc__policy--link">Privacy
+            <p class="early-acc__policy"><span>© 2022 Futrwrk Inc</span> <a href="/privacy-policy.html"
+                                                                            class="early-acc__policy--link">Privacy
                 policy</a></p>
         </div>
 
@@ -412,11 +398,11 @@
             </g>
         </svg>
         <p class="success-modal__description">Awesome! Thanks for jumping on board the 133T train! We're
-            working on getting 133T ready and can't wait to hear your feedback!
+            working on getting Futrwrk ready and can't wait to hear your feedback!
             <span class="success-modal__description--blue">Feel free to reach out to us on live chat or drop us an
                 email.</span>
         </p>
-        <a class="success-modal__link" href="mailto:Hello@133tjobs.com">Hello@133tjobs.com</a>
+        <a class="success-modal__link" href="mailto:hello@futrwrk.com">hello@futrwrk.com</a>
         <button type="button" class="blue-button success-modal__button" onclick="successModalAction(false)">Gotcha!
         </button>
     </div>

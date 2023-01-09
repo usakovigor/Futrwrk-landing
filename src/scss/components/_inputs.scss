@@ -1,0 +1,109 @@
+.form-group {
+  width: 100%;
+  position: relative;
+
+  &--select {
+    height: 74px;
+  }
+}
+
+.form-group.has-danger > .input,
+.form-group.has-danger-custom > .input-select {
+  background: $color__error-bg;
+  border: 1px solid $color__error
+}
+
+.input {
+  width: 100%;
+  height: 41px;
+  padding: 14px 8px 13px;
+  margin-bottom: 33px;
+  background-color: $color__main-bg;
+  border: 1px solid #ebebec;
+  border-radius: 4px;
+  color: $color__text-black;
+  font-size: 14px;
+  font-family: $font__main;
+
+  &--textarea {
+    resize: none;
+    height: 250px;
+  }
+
+  &::placeholder {
+    font-size: 13px;
+    font-family: $font__main;
+    color: #c1c2c5;
+  }
+
+  &:focus-visible {
+    outline: unset;
+    border: 1px solid #999ee3;
+    background-color: $color__main-bg;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: $font__main;
+
+  &__item {
+    margin: 0;
+    width: 26px;
+    height: 26px
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.67;
+    color: $color__text-gray;
+
+    a {
+      color: #6973ee;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.pristine-error, .custom-error {
+  font-family: $font__main;
+  position: absolute;
+  right: 0;
+  font-size: 13.5px;
+  line-height: 1.48;
+  color: #f66565;
+  bottom: 10px;
+}
+
+.checkbox .pristine-error {
+  bottom: -20px;
+}
+
+.input-select {
+  width: 100%;
+  height: 41px;
+  margin-bottom: 33px;
+  border: 1px solid #ebebec;
+  border-radius: 4px;
+  font-weight: 500;
+  color: $color__violet;
+  background-color: $color__white;
+  outline: 0;
+  font-size: 14px;
+  @include flex(center, flex-start);
+
+  &:focus-visible {
+    color: $color__text-black;
+    border: 1px solid #999ee3;
+  }
+
+  .current {
+    line-height: 1;
+    margin-top: 1px;
+  }
+}

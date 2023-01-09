@@ -1,5 +1,4 @@
 .footer {
-  min-height: 504px;
   background-color: #3641ba;
   padding-top: 33px;
   margin-top: 137px;
@@ -12,25 +11,24 @@
   }
 
   &__nav {
-    @include flex(center, space-between);
-
+    @include flex(center, flex-start);
     width: 100%;
+    gap: 68.9px;
 
     @include xl {
       gap: 70px;
-
+      justify-content: space-between;
     }
 
     @include xs {
+      gap: 20px;
       flex-direction: column;
     }
   }
 
   &__nav-list {
-    @include flex(center, space-between);
-
-    max-width: 1138.4px;
-    width: 100%;
+    @include flex(center, flex-start);
+    gap: 60px;
 
     @include xl {
       flex-wrap: wrap;
@@ -51,8 +49,8 @@
     color: $color__white;
     cursor: pointer;
 
-    &:hover {
-      text-decoration: underline;
+    &:hover, &--active {
+      opacity: 0.8;
     }
   }
 
@@ -123,14 +121,14 @@
   }
 
   &__socials-list {
-    @include flex(center, space-between);
-
-    max-width: 389px;
+    @include flex(center, flex-end);
     width: 100%;
-    margin: 0 165.4px 0 auto;
+    gap: 10px 40px;
+    padding-right: 165.4px;
 
     @include xs {
-      margin: 0 auto;
+      padding-right: 0;
+      justify-content: center;
     }
 
     @include xxs {
@@ -144,5 +142,10 @@
     @include xxs {
       font-size: 14px;
     }
+  }
+
+  &__logo {
+    width: 56px;
+    height: 56px;
   }
 }

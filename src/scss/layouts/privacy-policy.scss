@@ -1,5 +1,30 @@
 @import "../helpers/helpers";
 
+.header {
+  width: 44.5%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+
+  &__wrapper {
+    width: 426px;
+    margin: 15px auto 0;
+    height: 100%;
+
+    @include sm {
+      width: 100%;
+      margin: 15px 0 0 10px;
+    }
+  }
+
+  &__logo {
+    width: 131px;
+    cursor: pointer;
+  }
+}
+
 .privacy-policy {
   padding-top: 91px;
   background: $color__white;

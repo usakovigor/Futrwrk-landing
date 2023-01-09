@@ -1,4 +1,5 @@
 @import "../helpers/helpers";
+@import "../components/btn-section";
 
 .auto-apply {
   @include flex(flex-start, space-between);
@@ -12,6 +13,7 @@
 
   @include xs {
     margin-top: 50px;
+    padding: 0;
   }
 
   &__img {
@@ -43,6 +45,10 @@
       padding-top: 80px;
       max-width: 900px;
     }
+
+    @include xs {
+      padding: 0 25px 0 16.5px;
+    }
   }
 
   &__description {
@@ -56,7 +62,7 @@
   }
 
   &__list {
-    @include flex(center, space-between);
+    @include flex(flex-start, space-between);
     margin-top: 24px;
 
     @include xxl {
@@ -66,7 +72,7 @@
     @include xxs {
       flex-direction: column;
       gap: 30px;
-      margin: 0 auto;
+      margin: 50px auto 0;
     }
   }
 
@@ -90,7 +96,11 @@
 }
 
 .check-out {
-  margin-top: 100px;
+  margin-top: 177px;
+
+  @include sm {
+    margin-top: 107px;
+  }
 
   &__container {
     max-width: 920px;
@@ -111,7 +121,7 @@
       }
 
       @include xl {
-        left: -17px;
+        left: -50px;
       }
     }
 
@@ -123,7 +133,7 @@
       }
 
       @include xl {
-        right: -17px;
+        right: -50px;
       }
     }
 
@@ -131,7 +141,7 @@
       font-size: 50px;
     }
 
-    @include sm {
+    @include lg {
       font-size: 0;
     }
   }
@@ -157,12 +167,16 @@
   width: 100%;
   min-height: 333px;
   height: 100%;
-  margin: 150px auto 0;
+  margin: 183px auto 0;
   padding: 29.3px 38px 34px 36px;
   border-radius: 10px;
   background-color: $color__violet;
   position: relative;
   z-index: 1;
+
+  @include xs {
+    margin-top: 83px;
+  }
 
   &::after {
     content: url('/assets/images/launch_website/testimonials.svg');
@@ -212,13 +226,13 @@
   }
 
   &__description {
-    max-width: 745px;
+    max-width: 830px;
     width: 100%;
     margin-top: 34.2px;
     line-height: 1.5;
     letter-spacing: -0.67px;
 
-    @include xxl {
+    @include xl {
       margin-left: auto;
       margin-right: auto;
     }
@@ -227,9 +241,37 @@
   &__persons-name {
     font-size: 25px;
     width: fit-content;
-    margin: 38.5px 0 0 auto;
+    margin: auto 0 0 auto;
     line-height: 1.2;
     letter-spacing: -0.83px;
+  }
+
+  &__slider {
+    width: 100%;
+    padding-bottom: 25px !important;
+
+    .swiper-slide {
+      cursor: grab;
+      display: flex;
+      flex-direction: column;
+      gap: 38.5px;
+      height: auto;
+    }
+
+    .swiper-pagination-bullets {
+      bottom: 0 !important;
+    }
+
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      background: #d8d8d8;
+      opacity: .6;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
   }
 }
 

@@ -1,13 +1,16 @@
 // Should be imported at the bottom of tha page separately;
 
 .btn-section {
+  @include flex(center, space-between);
   gap: 60.4px;
-  padding: 0 49.8px 0 86.5px;
-  margin-top: 255px;
+  margin: 75px auto 0;
+  padding: 0 54.2px 0 55px;
   align-items: center;
+  max-width: 1280px;
 
   @include xxl {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   @include sm {
@@ -15,9 +18,14 @@
     margin-top: 90px;
   }
 
+  @include xs {
+    margin-top: 50px;
+    padding: 0;
+  }
+
   &--reversed {
     flex-direction: row-reverse;
-    margin-top: 229px;
+    padding: 0 0 0 55px;
 
     @include xxl {
       flex-direction: column-reverse;
@@ -27,8 +35,51 @@
       margin-top: 90px;
     }
 
+    @include xs {
+      padding: 0;
+    }
+
     .container {
       padding-top: 18px;
+
+      @include lg {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &--wide {
+    margin-top: 90px;
+    max-width: 1463px;
+    padding: 0 53.8px 0;
+
+    .main-btn--blue {
+      width: 212px;
+      border: unset;
+    }
+
+    @include xs {
+      padding: 0;
+    }
+  }
+
+  &__img {
+    max-width: 582px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    &--middle {
+      max-width: 675px;
+    }
+
+    &--small {
+      max-width: 596px;
+      margin-top: 33px;
+    }
+
+    &--big {
+      max-width: 774px;
     }
   }
 
@@ -51,6 +102,32 @@
     @include xxl {
       max-width: unset;
       text-align: center;
+    }
+  }
+
+  &__container {
+    max-width: 485px;
+    width: 100%;
+    margin-top: 25px;
+
+    .title {
+      max-width: 514px;
+      line-height: 1.45;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+
+      @include xxl {
+        max-width: unset;
+      }
+    }
+
+    @include xxl {
+      padding-top: 80px;
+      max-width: 900px;
+    }
+
+    @include lg {
+      padding-top: 0;
     }
   }
 
