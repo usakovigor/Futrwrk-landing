@@ -2,7 +2,7 @@
   height: 679px;
   width: 100%;
   overflow: hidden;
-  padding: 25px 51.1px 0 8px;
+  padding: 19px 51.1px 0 8px;
   background: url('/assets/images/launch_website/for-js-bg.png'), linear-gradient(255deg, rgba(61, 78, 220, 1) 0%, rgba(67, 93, 217, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(105, 115, 238, 1) 70%, rgba(119, 236, 191, 1) 100%);
 
   &--for-e {
@@ -10,7 +10,7 @@
   }
 
   @include xxl {
-    padding: 20px 8px 0 8px;
+    padding: 13px 8px 0 8px;
   }
 
   @include lg {
@@ -20,7 +20,7 @@
 
   @include xs {
     height: 100vh;
-    padding: 10px 8px 0 8px;
+    padding: 8px 8px 0 8px;
   }
 
   &__wrapper {

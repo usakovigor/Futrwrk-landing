@@ -6,14 +6,14 @@
     background: linear-gradient(90deg, rgba(119, 236, 191, 1) 0%, rgba(72, 108, 215, 1) 53%, rgba(67, 93, 217, 1) 70%, rgba(61, 78, 220, 1) 100%);
     height: auto;
     @include flex(flex-start, center);
-    padding-bottom: 25px;
+    padding-bottom: 19px;
 
     @include xxl {
-      padding-bottom: 20px;
+      padding-bottom: 13px;
     }
 
     @include xs {
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
   }
 
@@ -169,6 +169,7 @@
     font-size: 25px;
     color: $color__text-gray;
     margin-top: 53px;
+    line-height: 1.8;
 
     @include sm {
       margin-top: 30px;
