@@ -85,16 +85,24 @@
     color: $color__white;
     position: relative;
 
-    &:hover::after,
-    &--active::after {
-      content: '';
-      position: absolute;
-      width: 100%;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
       height: 3.6px;
-      bottom: -8px;
-      left: 0;
 
+      position: absolute;
+      left: 0;
+      bottom: -3.6px;
+
+      transition: width .2s ease-in;
       background-color: #77ecbf;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &--active::after {
+      width: 100%;
     }
   }
 
@@ -272,7 +280,6 @@
   }
 
   &__hiring-link {
-    padding-left: 15px;
     color: $color__neon;
     text-decoration: underline;
     position: relative;
