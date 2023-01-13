@@ -8,6 +8,19 @@
       padding-left: 151.4px;
       padding-right: 96.6px;
     }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include xxs {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+    }
   }
 
   &__nav {
@@ -122,18 +135,25 @@
 
   &__socials-list {
     @include flex(center, flex-end);
-    width: 100%;
     gap: 10px 40px;
     padding-right: 165.4px;
+    margin-left: auto;
 
-    @include xs {
+    @include xl {
       padding-right: 0;
-      justify-content: center;
     }
 
     @include xxs {
+      margin-left: unset;
+      justify-content: center;
       flex-wrap: wrap;
     }
+  }
+
+  &__rights {
+    color: $color__text-gray;
+    font-family: $font__main;
+    font-size: 16px;
   }
 
   &__socials-item > &__link {
