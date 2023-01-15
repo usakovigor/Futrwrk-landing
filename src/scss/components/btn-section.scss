@@ -25,7 +25,7 @@
 
   &--reversed {
     flex-direction: row-reverse;
-    padding: 0 0 0 55px;
+    padding: 0;
 
     @include xxl {
       flex-direction: column-reverse;
@@ -33,10 +33,6 @@
 
     @include sm {
       margin-top: 90px;
-    }
-
-    @include xs {
-      padding: 0;
     }
 
     .container {
@@ -96,17 +92,15 @@
 
   &__description {
     padding: 19px 0 35.1px;
-    max-width: 449px;
     letter-spacing: -0.38px;
 
     @include xxl {
-      max-width: unset;
       text-align: center;
     }
   }
 
   &__container {
-    max-width: 485px;
+    max-width: 570px;
     width: 100%;
     margin-top: 25px;
 
