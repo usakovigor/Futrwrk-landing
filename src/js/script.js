@@ -77,6 +77,7 @@ function signUpRequest() {
     }).then((res) => {
         if (res.ok) {
             clearForm();
+            gtag('event', 'conversion', {'send_to': 'AW-11064986267/zLLWCLu2pIoYEJuVmZwp'});
             successModalAction(true);
         } else {
             alert(`HTTP Error: ${res.statusText}`);
