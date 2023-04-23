@@ -1,0 +1,21 @@
+.jump-in {
+  height: 1093px;
+  width: 100%;
+  background: url("../assets/images/common/blush-bg.svg") no-repeat, $color__bg-dark--s1;
+  background-position: top center;
+
+  @include sm {
+    height: 700px;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    @include flex(center, center);
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__buttons {
+    margin-top: 58px;
+  }
+}

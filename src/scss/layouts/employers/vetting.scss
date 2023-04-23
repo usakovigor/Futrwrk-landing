@@ -1,0 +1,27 @@
+.vet {
+  width: 100%;
+  background: $color__bg-dark--s1;
+  padding-top: 142px;
+  padding-bottom: 91px;
+
+  @include xs {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__desc {
+    max-width: 824px;
+  }
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__list {
+    margin-top: 70px;
+
+    @include xl {
+      margin: 70px auto 0;
+    }
+  }
+}

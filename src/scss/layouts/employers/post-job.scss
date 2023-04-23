@@ -1,0 +1,169 @@
+.post-job {
+  width: 100%;
+  background: $color__bg-dark--s1 url("../assets/images/employers/header.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  height: 1246px;
+  position: relative;
+
+  @media (min-width: 2749px) {
+    background-size: unset;
+  }
+
+  @media (max-width: 2280px) {
+    background-size: unset;
+  }
+
+  @include lg {
+    background: $color__bg-dark--s1 url("../assets/images/employers/header-circle.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: auto;
+    padding-bottom: 200px;
+  }
+
+  @include xxs {
+    padding-bottom: 80px;
+    background-position-y: -100px;
+  }
+
+  &__head {
+    max-width: 913px;
+    margin: 0 auto;
+    padding: 224px 0 19px;
+
+    @include lg {
+      padding: 100px 0 19px;
+    }
+
+    @include sm {
+      padding: 80px 0 19px;
+    }
+  }
+
+  &__title {
+    margin-top: 46px;
+  }
+
+  &__subtitle {
+    max-width: 972px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 240px;
+
+    @include lg {
+      margin-top: 140px;
+    }
+
+    @include xs {
+      margin-top: 80px;
+    }
+  }
+}
+
+.example {
+  width: 100%;
+  background: $color__bg-dark--s1;
+  height: 692px;
+
+  @media (max-width: 1230px) {
+    height: 492px;
+  }
+
+  @include lg {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    top: -400px;
+
+    @include lg {
+      top: 0;
+    }
+  }
+
+  &__switch {
+    border-radius: 10px;
+    max-width: 139px;
+    padding: 7px 17px;
+    background: $color__bg-dark--s2;
+    @include flex(center, center);
+    gap: 16px;
+
+    @include sm {
+      width: fit-content;
+      padding: 4px 9px;
+      gap: 8px;
+    }
+
+    li {
+      width: 44px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background: #242424;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @include sm {
+        width: 25px;
+      }
+    }
+
+    li:last-child {
+      background: #d8d8d8;
+    }
+  }
+
+  &__example {
+    margin-top: 21px;
+    padding: 50px;
+    height: 787px;
+    width: 100%;
+    border-radius: 30px;
+
+    @include xl {
+      padding: 25px;
+    }
+
+    @media (max-width: 1230px) {
+      padding: 15px;
+      height: 600px;
+    }
+
+    @include sm {
+      padding: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: unset;
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: url("../assets/images/employers/candidates-ex.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @include xl {
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 1230px) {
+      background-position: top center;
+    }
+  }
+}

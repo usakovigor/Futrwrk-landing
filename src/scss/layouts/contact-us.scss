@@ -85,7 +85,7 @@
 
     &--dot::before {
       content: '';
-      background: $color__violet;
+      background: $color__blue--main;
       width: 13px;
       height: 13px;
       border-radius: 50%;
@@ -167,7 +167,7 @@
 
   &__desc {
     font-size: 25px;
-    color: $color__text-gray;
+    color: $color__text--gray;
     margin-top: 53px;
     line-height: 1.8;
 

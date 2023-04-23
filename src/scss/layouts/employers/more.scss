@@ -1,0 +1,18 @@
+.more {
+  width: 100%;
+  background: $color__bg-grey;
+  padding: 98px 0;
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  &__head {
+    max-width: 812px;
+    margin: 0 auto 95px;
+  }
+
+  &__title {
+    margin-top: 50px;
+  }
+}

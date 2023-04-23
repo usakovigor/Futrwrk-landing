@@ -1,0 +1,78 @@
+.review {
+  width: 100%;
+  padding: 117px 0 209px;
+  background: url("../assets/images/common/blush-bg.svg") no-repeat, $color__bg-dark--s1;
+  background-position: top center;
+
+  @include xs {
+    padding: 70px 0;
+    background-size: cover;
+  }
+
+  &__title {
+    margin: 85px 0 0;
+  }
+
+  &__list {
+    margin-top: 95px;
+    @include flex(stretch, center);
+    gap: 34px;
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    padding: 30px;
+    flex-grow: 1;
+    max-width: 627px;
+    border-radius: 20px;
+    background: $color__bg-dark--s2;
+
+    &:nth-of-type(odd) {
+      background: url("../assets/images/employers/gradient-odd.png");
+      background-size: cover;
+    }
+
+    &:nth-of-type(even) {
+      background: url("../assets/images/employers/gradient-even.png");
+      background-size: cover;
+    }
+  }
+
+  &__head {
+    @include flex(center, flex-start);
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+
+  &__card-title {
+    font-size: 19px;
+  }
+
+  &__separator {
+    display: inline-block;
+    width: 22px;
+    height: 23px;
+    vertical-align: middle;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 100%;
+      background: #474747;
+      border-radius: 4px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: normal;
+    margin-top: 12px;
+  }
+}

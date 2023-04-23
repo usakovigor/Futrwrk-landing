@@ -1,110 +1,185 @@
 @import 'reset';
 @import 'helpers/helpers';
 
-.wrapper {
-  max-width: 1511.5px;
-  width: 100%;
-  margin: 0 auto;
+:root {
+  color-scheme: dark;
+}
 
-  @include xxl {
+.wrapper {
+  max-width: 1545px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: 1545px) {
+    padding: 0;
+  }
+}
+
+.wrapper-med {
+  @extend .wrapper;
+  max-width: 1290px;
+  padding: 0;
+
+  @include xl {
     padding: 0 15px;
   }
 }
 
-.title {
-  font-family: $font__main;
-  font-weight: 600;
-  color: #333333;
-  letter-spacing: -0.3px;
+.white-link {
+  font-family: $font__red-hat;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color__text--white;
+  transition: color 0.3s ease-out;
+  cursor: pointer;
 
-  @include xl {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  &--big {
-    font-size: 60px;
-
-    @include xl {
-      font-size: 50px;
-    }
-
-    @include xs {
-      font-size: 35px;
-    }
-  }
-
-  &--middle {
-    font-size: 50px;
-
-    @include xl {
-      font-size: 40px;
-    }
-
-    @include xs {
-      font-size: 25px;
-    }
-  }
-
-  &--main {
-    font-size: 42px;
-
-    @include xl {
-      font-size: 32px;
-    }
-
-    @include xs {
-      font-size: 28px;
-    }
-  }
-
-  &--white {
-    color: $color__white;
-  }
-
-  &--highlighted {
-    color: $color__neon;
+  &:hover {
+    color: $color__blue--main;
   }
 }
 
-.description {
+.white-title {
   font-family: $font__main;
-  font-weight: 500;
+  font-size: 60px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -2px;
+  color: $color__text--white;
 
-  @include xl {
+  &--centered {
     text-align: center;
   }
 
-  &--white {
-    color: $color__white;
+  @include xs {
+    font-size: 50px;
+  }
+}
+
+.black-title {
+  @extend .white-title;
+  color: $color__text--black;
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.white-title-lined {
+  @extend .white-title;
+  letter-spacing: -1.17px;
+  font-size: 35px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 6px;
+    background: $color__blue--main;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    border-radius: 4px;
+  }
+}
+
+.gray-text {
+  font-family: $font__inter;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.64;
+  letter-spacing: -0.43px;
+  color: $color__text--gray;
+
+  @include xs {
+    font-size: 18px;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.subtitle {
+  margin-top: 19px;
+}
+
+.tag {
+  padding: 7px 20.5px;
+  display: inline-block;
+  border-radius: 5px;
+  background: $color__bg-dark--s2;
+  font-family: $font__space-mono;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $color__blue--main;
+  vertical-align: middle;
+
+  &--blue {
+    background: $color__text--dark-blue;
+  }
+
+  &--light {
+    background: $color__bg-grey--dark;
+  }
+
+  &--blue-light {
+    background: $color__blue--main;
+    color: $color__text--dark-blue;
   }
 
   &--small {
-    font-size: 18px;
-    line-height: 1.94;
-    letter-spacing: -0.08px;
-  }
-
-  &--main {
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 1.8;
-  }
-
-  &--big {
-    font-size: 27px;
+    padding: 3px 7.5px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: unset;
+    font-family: $font__red-hat;
   }
 }
 
-.container {
-  width: 100%;
+.card-title {
+  font-family: $font__inter;
+  font-size: 17px;
+  font-weight: 500;
+  color: $color__text--white;
 
-  &--centred {
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.4;
-    height: 100%;
+  &--dark {
+    color: $color__text--light-black;
   }
+}
+
+.card-desc {
+  @extend .gray-text;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.card-bordered {
+  background: linear-gradient($color__bg-dark--s2, $color__bg-dark--s2) padding-box,
+  linear-gradient(to bottom, $color__bg-dark--s2, #5f5f5f) border-box;
+  border: 1px solid transparent;
+
+  &--light {
+    background: linear-gradient($color__bg-dark--s2, $color__bg-dark--s2) padding-box,
+    linear-gradient(to bottom, rgba(42, 42, 42, 0.43) 48%, #5f5f5f 100%) border-box;
+  }
+}
+
+.highlighted {
+  color: $color__blue--main;
+}
+
+// common classes
+
+.h100 {
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
 }
 
 @import "./components/components";

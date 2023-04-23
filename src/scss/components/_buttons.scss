@@ -1,0 +1,86 @@
+.button {
+  padding: 0 20.5px;
+  border-radius: 8px;
+  height: 49px;
+  font-family: $font__inter;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+
+  @include sm {
+    height: 39px;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.blue-button {
+  @extend .button;
+  background-color: $color__blue--main;
+  font-size: 18px;
+  color: $color__text--dark;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $color__blue--secondary;
+  }
+}
+
+.dark-button-stable {
+  @extend .button;
+  padding: unset;
+  font-size: 18px;
+  color: $color__blue--main;
+  transition: background-color 0.3s ease-in-out;
+  background: $color__bg-dark--s2;
+  @include flex(center, center);
+  gap: 9px;
+  width: 204px;
+
+  &:hover {
+    background-color: $color__bg-dark--s3;
+  }
+}
+
+.dark-button {
+  @extend .button;
+  height: auto;
+  padding: 14px 21px;
+  color: $color__blue--main;
+  transition: background-color 0.3s ease-in-out;
+  background: $color__bg-dark--s3;
+  @include flex(center, center);
+  gap: 9px;
+
+  &:hover {
+    background-color: $color__bg-dark--s1;
+  }
+
+  &--hov:hover {
+    background-color: $color__bg-dark--s2;
+  }
+}
+
+.light-button {
+  @extend .button;
+  height: auto;
+  padding: 14px 21px;
+  color: $color__blue--main;
+  transition: background-color 0.3s ease-in-out;
+  background: $color__bg-light-gray;
+  @include flex(center, center);
+  gap: 9px;
+
+  &:hover {
+    background-color: $color__bg-grey--dark;
+  }
+}
+
+.stale-buttons {
+  @include flex(center, center);
+  gap: 30px 14px;
+  flex-wrap: wrap-reverse;
+}

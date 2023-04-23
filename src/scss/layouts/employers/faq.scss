@@ -1,0 +1,21 @@
+.faq {
+  width: 100%;
+  background: $color__bg-dark--s1;
+  padding: 147px 0 70px;
+
+  @include xs {
+    padding-top: 70px;
+  }
+}
+
+.jump-in {
+  padding: 175px 0 322px;
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  &__buttons {
+    margin-top: 58px;
+  }
+}

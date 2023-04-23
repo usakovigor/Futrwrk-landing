@@ -1,36 +1,8 @@
 @import "../helpers/helpers";
 
-.header {
-  width: 44.5%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-
-  @include sm {
-    width: 100%;
-  }
-
-  &__wrapper {
-    width: 426px;
-    margin: 15px auto 0;
-    height: 100%;
-
-    @include sm {
-      width: 100%;
-      margin: 15px 0 0 10px;
-    }
-  }
-
-  &__logo {
-    cursor: pointer;
-  }
-}
-
 .privacy-policy {
   padding-top: 91px;
-  background: $color__white;
+  background: $color__bg-dark--s1;
   font-family: $font__main;
 
   &__wrapper {
@@ -43,6 +15,7 @@
   &__title {
     font-size: 30px;
     font-weight: 700;
+    color: $color__text--white;
 
     &--small {
       font-size: 20px;
@@ -51,9 +24,15 @@
 
   p {
     margin: 25px 0;
+    color: $color__text--gray;
 
     @include xxs {
       margin: 20px 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 20px;
     }
   }
 
@@ -69,6 +48,7 @@
 
     & > li {
       margin: 5px 0;
+      color: $color__text--gray;
 
       &:first-letter {
         text-transform: uppercase;

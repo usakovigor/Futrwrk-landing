@@ -1,171 +1,117 @@
 .footer {
-  background-color: #3641ba;
-  padding-top: 33px;
-  margin-top: 137px;
+  width: 100%;
+  padding: 142px 0 36px;
+  background-color: $color__bg-dark--s1;
+  border-top: 1px solid rgba($color__footer-border, .2);
+
+  @include lg {
+    padding-top: 36px;
+  }
+
+  @include xxs {
+    padding: 36px 30px;
+  }
 
   &__wrapper {
-    @media (screen and min-width: 1200px) {
-      padding-left: 151.4px;
-      padding-right: 96.6px;
+    @include flex(flex-start, center);
+    gap: 20px 126px;
+
+    @include lg {
+      gap: 20px 80px;
     }
-
-    &--flex {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      @include xxs {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-direction: column-reverse;
-        justify-content: center;
-      }
-    }
-  }
-
-  &__nav {
-    @include flex(center, flex-start);
-    width: 100%;
-    gap: 68.9px;
-
-    @include xl {
-      gap: 70px;
-      justify-content: space-between;
-    }
-
-    @include xs {
-      gap: 20px;
-      flex-direction: column;
-    }
-  }
-
-  &__nav-list {
-    @include flex(center, flex-start);
-    gap: 60px;
-
-    @include xl {
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 20px;
-    }
-
-    @include xs {
-      justify-content: center;
-    }
-  }
-
-  &__link {
-    font-family: $font__main;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: -0.11px;
-    color: $color__white;
-    cursor: pointer;
-
-    &:hover, &--active {
-      opacity: 0.8;
-    }
-  }
-
-  &__container {
-    @include flex(center, space-between);
-    gap: 50px;
-
-    min-height: 307.1px;
-    padding-top: 94px;
-    margin-bottom: 60px;
 
     @include sm {
-      flex-direction: column;
-    }
-  }
-
-  &__content {
-    max-width: 504px;
-    width: 100%;
-  }
-
-  &__title {
-    font-size: 45px;
-    font-weight: 500;
-    padding-top: 39.1px;
-    position: relative;
-    line-height: normal;
-    line-height: 1;
-    letter-spacing: -.4px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 10px;
-      top: 0;
-      left: 0;
-
-      background-color: #2a2a2a;
-    }
-
-    @include xs {
-      font-size: 30px;
-    }
-  }
-
-  &__description {
-    margin-top: 21px;
-    font-size: 18px;
-    color: #a5a5a5;
-  }
-
-  &__button {
-    border: 2px solid $color__white;
-    color: $color__white;
-    margin-right: 165px;
-
-    @include xl {
-      margin-right: 0;
-    }
-  }
-
-  &__socials {
-    min-height: 47px;
-    height: 100%;
-    background-color: #2a2a2a;
-    @include flex(center, space-between);
-  }
-
-  &__socials-list {
-    @include flex(center, flex-end);
-    gap: 10px 40px;
-    padding-right: 165.4px;
-    margin-left: auto;
-
-    @include xl {
-      padding-right: 0;
-    }
-
-    @include xxs {
-      margin-left: unset;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
-  &__rights {
-    color: $color__text-gray;
-    font-family: $font__main;
-    font-size: 16px;
-  }
+  &__privacy {
+    @include flex(center, space-between);
+    gap: 30px;
+    margin-top: 135px;
 
-  &__socials-item > &__link {
-    font-weight: 500;
+    @include lg {
+      margin-top: 36px;
+    }
 
     @include xxs {
-      font-size: 14px;
+      gap: 10px 30px;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
     }
   }
 
   &__logo {
-    width: 56px;
-    height: 56px;
+    width: 149px;
+    margin-right: 82px;
+
+    @include xl {
+      margin-right: unset;
+    }
+
+    @include sm {
+      width: 110px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include xs {
+      width: 40%;
+    }
+
+    @include xxs {
+      width: 100%;
+    }
+
+    .white-link {
+      letter-spacing: 1.4px;
+    }
+  }
+
+  &__list:first-child {
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    line-height: 1.57;
+    letter-spacing: 1.4px;
+    font-family: $font__work-sans;
+    font-size: 14px;
+    color: $color__blue--main;
+    margin-top: 13px;
+  }
+
+  &__rights {
+    font-family: $font__red-hat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $color__text--gray;
+  }
+
+  &__links {
+    @include flex(center, flex-end);
+    gap: 22px;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__tag {
+    margin-left: 7px;
+
+    span {
+      position: relative;
+      top: 1px;
+    }
   }
 }

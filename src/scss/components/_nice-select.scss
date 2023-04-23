@@ -2,27 +2,43 @@
   padding-left: 8px;
 
   &::after {
-    border-bottom: 1.5px solid $color__violet;
-    border-right: 1.5px solid $color__violet;
+    border-bottom: 2px solid $color__arrow-border;
+    border-right: 2px solid $color__arrow-border;
+    margin-right: 8px
   }
 
   &:focus {
-    border: 1px solid #999ee3;
+    border: 1px solid $color__blue--main;
   }
 
   .option {
-    color: $color__text-black;
+    color: $color__text--gray;
     font-weight: 700;
     @include flex(center, flex-start);
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: #f4f5f9;
+      background-color: $color__bg-dark--s2;
     }
+  }
+
+  .option.selected.focus {
+    background:  $color__bg-dark--s2;
+  }
+
+  .list {
+    background: $color__bg-dark--s3;
+    border-color: $color__bg-dark--s3;
+  }
+
+  .nice-select-dropdown {
+    background: $color__bg-dark--s3;
+    top: 50px;
   }
 }
 
 .nice-select-dropdown {
-  width: 100%;
+  width: calc(100% + 2px);
+  left: -1px !important;
   transition: all .15s linear;
 }

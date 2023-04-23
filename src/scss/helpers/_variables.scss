@@ -1,14 +1,46 @@
+// FONTS
 $font__main: 'Graphik', sans-serif;
 $font__proxima: 'ProximaNova', sans-serif;
+$font__work-sans: 'Work Sans', sans-serif;
+$font__inter: 'Inter', sans-serif;
+$font__arimo: 'Arimo', sans-serif;
+$font__space-mono: 'SpaceMono', sans-serif;
+$font__red-hat: 'Red Hat Display', sans-serif;
 
-$color__violet: #4d57d0;
-$color__neon: #77ecbf;
-$color__main-bg: #f4f5f9;
-$color__text-black: #272727;
-$color__white: #ffffff;
-$color__text-gray: #7d7d7d;
-$color__text-gray-light:#767676;
-$color__border: #d8d8d8;
-
+// COLORS
 $color__error-bg: #fff3f3;
 $color__error: #f77676;
+
+// NEW COLORS
+
+// Background colors
+$color__bg-dark: #141414;
+$color__bg-dark--s1: #1e1e1e;
+$color__bg-dark--s2: #2a2a2a;
+$color__bg-dark--s3: #313131;
+
+$color__bg-blue: #07092b;
+
+$color__bg-grey: #f6f6f6;
+$color__bg-light-gray: #f4f5f9;
+$color__bg-grey--dark: #e9e9e9;
+$color__bg-white: #ffffff;
+
+// Border colors
+$color__head-border: #252525;
+$color__footer-border: #979797;
+$color__input-border: #414141;
+$color__arrow-border: #575757;
+
+// Text colors
+$color__text--white: #ffffff;
+$color__text--black: #121212;
+$color__text--dark: #1e1e1e;
+$color__text--light-black: #343434;
+$color__text--gray: #7d7d7d;
+$color__text--dark-gray: #525252;
+$color__text--dark-blue: #07092b;
+
+// Main colors
+$color__blue--main: #6973ee;
+$color__blue--secondary: #4d57d0;

@@ -1,0 +1,1 @@
+function switchTheme(e){const s=e?"./assets/images/employers/candidates-ex-dark.png":"./assets/images/employers/candidates-ex.png";document.querySelector(".example__image").style.backgroundImage=`url(${s})`}

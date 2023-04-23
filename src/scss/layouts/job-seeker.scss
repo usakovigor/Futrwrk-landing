@@ -1,278 +1,59 @@
 @import "../helpers/helpers";
-@import "../components/btn-section";
+@import "./job-seeker/aa";
+@import "./job-seeker/profile";
+@import "./job-seeker/more";
+@import "./job-seeker/jump-in";
 
-.auto-apply {
-  @include flex(flex-start, space-between);
-  margin: 179px 0 0;
-  padding: 0 45px 0 36.5px;
+.box {
+  border-radius: 30px;
+  padding: 62px 66px 76px;
+  background-position-x: right;
+  background-position-y: center;
+  background-size: contain;
 
-  @include xxl {
-    flex-direction: column;
-    align-items: center;
+  @include xl {
+    background-position-x: 110%;
+  }
+
+  @include lg {
+    background-size: cover;
+    background-blend-mode: color-dodge;
   }
 
   @include xs {
-    margin-top: 50px;
-    padding: 0;
+    padding: 62px 42px;
+    background-blend-mode: overlay;
   }
 
-  &__img {
-    max-width: 793px;
-    width: 100%;
-    height: auto;
-
-    &--middle {
-      max-width: 675px;
-    }
+  @include xxs {
+    background-size: 100% 100%;
+    padding: 50px 15px 50px 25px;
   }
 
-  &__container {
-    max-width: 555px;
-    margin-top: 25px;
-
-    .title {
-      max-width: 514px;
-      line-height: 1.45;
-      letter-spacing: -0.3px;
-      margin-bottom: 4px;
-
-      @include xxl {
-        max-width: unset;
-      }
-    }
+  &__wrapper {
+    max-width: 1037px;
+    width: 75%;
+    padding-right: 25px;
 
     @include xxl {
-      padding-top: 80px;
-      max-width: 900px;
+      width: 70%;
     }
 
-    @include xs {
-      padding: 0 25px 0 16.5px;
-    }
-  }
-
-  &__description {
-    padding: 31.1px 0 0;
-    max-width: 449px;
-    letter-spacing: -0.38px;
-
-    @include xxl {
-      max-width: unset;
-    }
-  }
-
-  &__list {
-    @include flex(flex-start, space-between);
-    margin-top: 24px;
-
-    @include xxl {
-      gap: 50px;
-    }
-
-    @include xxs {
-      flex-direction: column;
-      gap: 30px;
-      margin: 50px auto 0;
-    }
-  }
-
-  &__item {
-    max-width: 244px;
-    width: 100%;
-
-    .title--main {
-      margin-bottom: 4px;
-    }
-
-    .description--main {
-      min-height: 108px;
-      letter-spacing: 0.38px;
-    }
-
-    @include xxl {
-      max-width: unset;
-    }
-  }
-}
-
-.check-out {
-  margin-top: 177px;
-
-  @include sm {
-    margin-top: 107px;
-  }
-
-  &__container {
-    max-width: 920px;
-    position: relative;
-  }
-
-  .icon-plane {
-    font-size: 72px;
-    position: absolute;
-    top: 27px;
-
-    &:first-child {
-      left: -137.3px;
-      transform: rotateY(180deg);
-
-      @include xxl {
-        left: -70px;
-      }
-
-      @include xl {
-        left: -50px;
-      }
-    }
-
-    &:nth-child(2) {
-      right: -137.3px;
-
-      @include xxl {
-        right: -70px;
-      }
-
-      @include xl {
-        right: -50px;
-      }
-    }
-
-    @include xxl {
-      font-size: 50px;
+    @include xl {
+      width: 65%;
     }
 
     @include lg {
-      font-size: 0;
-    }
-  }
-
-  &__description {
-    padding: 12px 0 0;
-    line-height: 1.75;
-    letter-spacing: -0.09px;
-    color: #767676;
-    font-weight: 500;
-  }
-
-  &__button {
-    width: 383px;
-    height: 86px;
-    margin: 29px auto 0;
-    padding: 24px 74px;
-  }
-}
-
-.reviews {
-  max-width: 1280px;
-  width: 100%;
-  min-height: 333px;
-  height: 100%;
-  margin: 183px auto 0;
-  padding: 29.3px 38px 34px 36px;
-  border-radius: 10px;
-  background-color: $color__violet;
-  position: relative;
-  z-index: 1;
-
-  @include xs {
-    margin-top: 83px;
-  }
-
-  &::after {
-    content: url('/assets/images/launch_website/testimonials.svg');
-    position: absolute;
-    width: 196px;
-    height: 194px;
-    top: 0;
-    right: 0;
-
-    @include lg {
-      opacity: 0.5;
-      z-index: -1;
+      width: 100%;
+      padding-right: 0;
     }
   }
 
   &__title {
-    width: fit-content;
-    color: $color__neon;
-    font-size: 80px;
-    font-weight: 500;
-    padding-bottom: 21.5px;
-    position: relative;
-    line-height: normal;
-    letter-spacing: -2.67px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      width: 100%;
-      height: 12px;
-      background-color: $color__white;
-
-      @include lg {
-        height: 8px;
-      }
-    }
-
-    @include xl {
-      font-size: 55px;
-    }
-
-    @include xs {
-      font-size: 35px;
-    }
+    margin-top: 35px;
   }
 
-  &__description {
-    max-width: 830px;
-    width: 100%;
-    margin-top: 34.2px;
-    line-height: 1.5;
-    letter-spacing: -0.67px;
-
-    @include xl {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &__persons-name {
-    font-size: 25px;
-    width: fit-content;
-    margin: auto 0 0 auto;
-    line-height: 1.2;
-    letter-spacing: -0.83px;
-  }
-
-  &__slider {
-    width: 100%;
-    padding-bottom: 25px !important;
-
-    .swiper-slide {
-      cursor: grab;
-      display: flex;
-      flex-direction: column;
-      gap: 38.5px;
-      height: auto;
-    }
-
-    .swiper-pagination-bullets {
-      bottom: 0 !important;
-    }
-
-    .swiper-pagination-bullet {
-      width: 18px;
-      height: 18px;
-      background: #d8d8d8;
-      opacity: .6;
-    }
-
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-    }
+  &__btn {
+    margin-top: 50px;
   }
 }
-
-@import "../components/btn-section";

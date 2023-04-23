@@ -1,29 +1,31 @@
 .form-group {
   width: 100%;
+  height: 80px;
   position: relative;
 
-  &--select {
-    height: 74px;
-  }
+  //&--select {
+  //  height: 60px;
+  //}
 }
 
 .form-group.has-danger > .input,
 .form-group.has-danger-custom > .input-select {
-  background: $color__error-bg;
   border: 1px solid $color__error
 }
 
 .input {
   width: 100%;
-  height: 41px;
-  padding: 14px 8px 13px;
-  margin-bottom: 33px;
-  background-color: $color__main-bg;
-  border: 1px solid #ebebec;
-  border-radius: 4px;
-  color: $color__text-black;
-  font-size: 14px;
+  height: 60px;
+  padding: 0 28.5px ;
+  border-radius: 15px;
+  border: solid 1px $color__input-border;
+  background: $color__bg-dark--s3;
+  color: $color__text--gray;
   font-family: $font__main;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin: 0;
 
   &--textarea {
     resize: none;
@@ -31,15 +33,15 @@
   }
 
   &::placeholder {
-    font-size: 13px;
+    font-size: 18px;
+    font-weight: 500;
     font-family: $font__main;
-    color: #c1c2c5;
+    color: $color__text--gray;
   }
 
   &:focus-visible {
     outline: unset;
-    border: 1px solid #999ee3;
-    background-color: $color__main-bg;
+    border: 1px solid $color__blue--main;
   }
 }
 
@@ -58,7 +60,7 @@
   &__label {
     font-size: 14px;
     line-height: 1.67;
-    color: $color__text-gray;
+    color: $color__text--gray;
 
     a {
       color: #6973ee;
@@ -77,7 +79,7 @@
   font-size: 13.5px;
   line-height: 1.48;
   color: #f66565;
-  bottom: 10px;
+  bottom: 0;
 }
 
 .checkbox .pristine-error {
@@ -86,20 +88,22 @@
 
 .input-select {
   width: 100%;
-  height: 41px;
-  margin-bottom: 33px;
-  border: 1px solid #ebebec;
-  border-radius: 4px;
-  font-weight: 500;
-  color: $color__violet;
-  background-color: $color__white;
+  font-family: $font__main;
+  height: 60px;
+  border: solid 1px $color__input-border;
+  border-radius: 15px;
+  color: $color__text--gray;
+  background-color: $color__bg-dark--s3;
   outline: 0;
-  font-size: 14px;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  padding: 0 35px 0 28.5px;
   @include flex(center, flex-start);
 
   &:focus-visible {
-    color: $color__text-black;
-    border: 1px solid #999ee3;
+    outline: unset;
+    border: 1px solid $color__blue--main;
   }
 
   .current {

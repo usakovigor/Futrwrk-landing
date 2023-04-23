@@ -44,9 +44,12 @@ async function onFormSubmit(event) {
     event.preventDefault();
     const selectValid = signUpSelect ? validateSelect('a-select') : validateSelect(['cs-select', 'help-select']);
 
+    console.log(1);
     if (!pristine.validate() || !selectValid) {
         return;
     }
+
+    console.log(2);
 
     if (signUpSelect) {
         signUpRequest();
@@ -56,15 +59,19 @@ async function onFormSubmit(event) {
 }
 
 function signUpRequest() {
-    const dataObj = {
-        first_name: document.getElementById('name').value,
-        last_name: document.getElementById('lastname').value,
+    let dataObj = {
         email: document.getElementById('email').value,
         user_type: document.getElementById('a-select').value
     };
 
     if (Object.values(dataObj).some((val) => !!!val)) {
+        console.error('email or user_type cannot be empty');
         return;
+    }
+
+    dataObj = {
+        ...dataObj, first_name: 'dummy_name',
+        last_name: 'dummy_name',
     }
 
     const ENDPOINT_URL = ' https://landing.133t.com/api/early-adopter/';
@@ -78,7 +85,7 @@ function signUpRequest() {
         if (res.ok) {
             clearForm();
             gtag('event', 'conversion', {'send_to': 'AW-11064986267/zLLWCLu2pIoYEJuVmZwp'});
-            successModalAction(true);
+            showSuccess();
         } else {
             alert(`HTTP Error: ${res.statusText}`);
         }
@@ -156,14 +163,11 @@ function validateSelect(selectId) {
     return resultArr.every(arrItem => !!arrItem);
 }
 
-function successModalAction(show) {
-    const modalElement = document.querySelector('.success-modal');
-    modalElement.style.display = show ? 'flex' : 'none';
-    const hideModalListenerCallbackFn = () => successModalAction(false);
-    if (show) {
-        modalElement.addEventListener('click', hideModalListenerCallbackFn)
-    } else {
-        modalElement.removeEventListener('click', hideModalListenerCallbackFn);
-    }
+function showSuccess() {
+    const formEle = document.getElementById('main-form');
+    const successEle = document.getElementById('success');
+
+    formEle.style.display = 'none';
+    successEle.style.display = 'block';
 }
 

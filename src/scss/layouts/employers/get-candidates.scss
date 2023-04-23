@@ -1,0 +1,90 @@
+.get-candidates {
+  width: 100%;
+  min-height: 911px;
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(90deg, #1e1e1e 0%, rgba(#d8d8d8, 0.08) 20%, rgba(#d8d8d8, 0.14) 50%, rgba(#d8d8d8, 0.08) 80%, #1e1e1e 100%) 1;
+  border-right: 0;
+  border-left: 0;
+  background: url("../assets/images/employers/candidates-bg.svg") no-repeat bottom;
+  background-size: cover;
+
+  &__head {
+    padding-top: 100px;
+    max-width: 793px;
+    margin: 0 auto;
+
+    @include xs {
+      padding-top: 70px;
+    }
+  }
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__subtitle {
+    max-width: 874px;
+    margin: 19px auto 84px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 85px;
+    @include flex(stretch, center);
+    gap: 35px;
+    padding-bottom: 40px;
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    border-radius: 10px;
+    padding: 19.5px;
+    width: 298px;
+    min-height: 346px;
+    position: relative;
+
+    @include sm {
+      width: 40%;
+    }
+
+    @include xs {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    @include xxs {
+      width: 90%;
+    }
+  }
+
+  &__img {
+    width: 113px;
+    height: 117px;
+    display: block;
+    margin: 38.5px auto 46.5px;
+  }
+
+  &__icon {
+    width: 25.5px;
+    height: 25.5px;
+    position: absolute;
+    top: 19.5px;
+    left: 19.5px;
+  }
+
+  &__card-wrapper {
+    padding: 0 12px;
+  }
+
+  &__desc {
+    padding-right: 25px;
+
+    &--small {
+      padding-right: 0;
+    }
+  }
+}

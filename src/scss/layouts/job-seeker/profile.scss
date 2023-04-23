@@ -1,0 +1,155 @@
+.profile {
+  width: 100%;
+  background: $color__bg-dark--s1;
+  padding-top: 152px;
+
+  @include xs {
+    padding-top: 70px;
+  }
+
+  &__head {
+    max-width: 890px;
+  }
+
+  &__title {
+    max-width: 830px;
+    margin-top: 50px;
+  }
+
+  &__list {
+    margin: 150px 0;
+    @include flex(stretch, space-between);
+    flex-wrap: wrap;
+    gap: 143px 34px;
+
+    @include xl {
+      justify-content: center;
+    }
+
+    @include lg {
+      gap: 103px 34px;
+    }
+
+    @include xs {
+      margin: 100px 0;
+      gap: 70px;
+    }
+  }
+
+  &__card {
+    max-width: 701px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    width: 50%;
+
+    @include xxl {
+      width: 45%;
+    }
+
+    @include xl {
+      min-width: 550px;
+      width: 100%;
+    }
+
+    @include xs {
+      min-width: unset;
+    }
+  }
+
+  &__tag {
+    font-family: $font__inter;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    color: $color__text--dark-gray;
+    text-transform: uppercase;
+  }
+
+  &__card-title {
+    font-family: $font__main;
+    color: $color__text--white;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -1.17px;
+    margin-top: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 55px;
+
+    @include xs {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__box {
+    background: url("../assets/images/job-seeker/guy.png") no-repeat, $color__bg-dark;
+    margin-bottom: 180px;
+
+    @include lg {
+      background: $color__bg-dark;
+      margin-bottom: 120px;
+    }
+
+    @include xs {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__box-wrapper {
+    max-width: 889px !important;
+    padding-right: unset !important;
+
+    @include xxl {
+      width: 60% !important;
+    }
+
+    @include lg {
+      width: 100% !important;
+      max-width: unset !important;
+    }
+  }
+
+  &__accordion {
+    padding: 0;
+    margin: 55px 0 0;
+    background: transparent;
+    height: 378px;
+
+    @include lg {
+      height: auto;
+    }
+
+    .accordion__head {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+  }
+
+  &__desc {
+    font-size: 15px;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: #575757;
+  }
+}
+
+.accordion__item--active {
+  .profile__icon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .profile__desc {
+    padding: 5px 0 16px;
+    min-height: unset;
+  }
+}

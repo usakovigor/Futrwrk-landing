@@ -1,0 +1,65 @@
+.more {
+  width: 100%;
+  background: $color__bg-grey;
+  padding: 117px 0;
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  &__header {
+    max-width: 865px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__subtitle {
+    margin: 19px auto 80px;
+    max-width: 978px;
+  }
+
+  &__list {
+    @include flex(stretch, center);
+    gap: 50px 27px;
+    flex-wrap: wrap;
+
+    @include lg {
+      gap: 27px;
+    }
+  }
+
+  &__item {
+    max-width: 437px;
+    border-radius: 30px;
+    background: $color__bg-white;
+    padding: 29.5px 47.5px 29.5px 70.5px;
+    position: relative;
+
+    @include lg {
+      width: 80%;
+      max-width: 730px;
+      padding: 25px 40px 25px 70.5px;
+    }
+
+    @include xxs {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 25.5px;
+    height: 25.5px;
+    display: block;
+  }
+
+  &__text {
+    color: $color__text--dark-gray;
+  }
+}

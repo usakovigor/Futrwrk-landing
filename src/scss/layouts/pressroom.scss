@@ -1,0 +1,30 @@
+@import "../helpers/helpers";
+
+.pressroom {
+  padding-top: 125px;
+  max-width: 1400px;
+  min-height: 70vh;
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__accordion {
+    max-width: unset;
+    padding: 0;
+    background: transparent;
+    margin-bottom: 125px;
+
+    .accordion__head {
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: -0.39px;
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
