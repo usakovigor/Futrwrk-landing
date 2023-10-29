@@ -44,12 +44,9 @@ async function onFormSubmit(event) {
     event.preventDefault();
     const selectValid = signUpSelect ? validateSelect('a-select') : validateSelect(['cs-select', 'help-select']);
 
-    console.log(1);
     if (!pristine.validate() || !selectValid) {
         return;
     }
-
-    console.log(2);
 
     if (signUpSelect) {
         signUpRequest();
