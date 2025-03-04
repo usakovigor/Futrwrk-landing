@@ -1,2 +1,2 @@
 Notes:
-  Added some new targets: S0015, S0025
+  Added some new targets: S0015, S0025, S0030
